@@ -6,6 +6,8 @@ public class CursorMovement : MonoBehaviour
 {
     Camera cameraObj;
 
+    LinkedList<GameObject> ObjectsIntersecting;
+
     void Start()
     {
         cameraObj = GameObject.Find("Main Camera").GetComponent<Camera>(); 
@@ -19,7 +21,15 @@ public class CursorMovement : MonoBehaviour
         Vector3 cursorPos = cameraObj.ScreenToWorldPoint(mousePos);
         cursorPos.z = 0;
         transform.position = cursorPos;
+    }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Debug.Log("Collieded");
+    }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Debug.Log("Triggered");
     }
 }
