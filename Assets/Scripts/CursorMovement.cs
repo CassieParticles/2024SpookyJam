@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class CursorMovement : MonoBehaviour
 {
-    Camera cameraObj;
-
-    LinkedList<GameObject> ObjectsIntersecting;
+    private Camera cameraObj;
+    private LinkedList<GameObject> objectsIntersecting;
+    private GameObject objectSelected;
 
     void Start()
     {
         cameraObj = GameObject.Find("Main Camera").GetComponent<Camera>(); 
-        ObjectsIntersecting = new LinkedList<GameObject>();
+        objectsIntersecting = new LinkedList<GameObject>();
     }
 
     // Update is called once per frame
@@ -26,11 +26,18 @@ public class CursorMovement : MonoBehaviour
         //Bad practice, will udpate if we have time
         if(Input.GetMouseButtonDown(0))
         {
-            Debug.Log("Pressed");
+            if(objectSelected = objectsIntersecting.First.Value) 
+            {
+                //TODO: Call select function within meteor
+            }
         }
         if(Input.GetMouseButtonUp(0))
         {
-            Debug.Log("Released");
+            if(objectSelected)
+            {
+                //TODO: Call deselect function within meteor
+                objectSelected = null;
+            }
         }
     }
 
@@ -40,7 +47,7 @@ public class CursorMovement : MonoBehaviour
         if(meteorComp != null) 
         {
             //If game object has meteor component
-            foreach(GameObject g in ObjectsIntersecting)
+            foreach(GameObject g in objectsIntersecting)
             {
                 //Check if meteor comp is already in list (won't be but good to check)
                 if(g.GetComponent<MeteorPhysics>()==meteorComp)
@@ -50,7 +57,7 @@ public class CursorMovement : MonoBehaviour
                 }
             }
 
-            ObjectsIntersecting.AddLast(collision.gameObject);
+            objectsIntersecting.AddLast(collision.gameObject);
         }
     }
 
@@ -63,12 +70,12 @@ public class CursorMovement : MonoBehaviour
             return;
         }
         
-        foreach (GameObject g in ObjectsIntersecting)
+        foreach (GameObject g in objectsIntersecting)
         {
             //Ensure item is in list (no reason it wouldn't be)
             if (g == other.gameObject)
             {
-                ObjectsIntersecting.Remove(g);
+                objectsIntersecting.Remove(g);
                 return;
             }
         }
