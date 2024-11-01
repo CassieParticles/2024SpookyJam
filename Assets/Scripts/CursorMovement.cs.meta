@@ -1,5 +1,9 @@
 fileFormatVersion: 2
-guid: d9ab3d3b4e49f5247bdcb97c414b241e
+<<<<<<<< HEAD:Assets/Scripts/CursorMovement.cs.meta
+guid: 1679f24b8030d08488f4af056d20cc01
+========
+guid: c3cb38a7e07436547a44ba2e33d9df44
+>>>>>>>> Meteors:Assets/Scripts/MeteorSpawning.cs.meta
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
