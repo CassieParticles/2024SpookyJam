@@ -23,7 +23,15 @@ public class CursorMovement : MonoBehaviour
         cursorPos.z = 0;
         transform.position = cursorPos;
 
-        Debug.Log(ObjectsIntersecting.Count);
+        //Bad practice, will udpate if we have time
+        if(Input.GetMouseButtonDown(0))
+        {
+            Debug.Log("Pressed");
+        }
+        if(Input.GetMouseButtonUp(0))
+        {
+            Debug.Log("Released");
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -46,7 +54,7 @@ public class CursorMovement : MonoBehaviour
         }
     }
 
-    private void OnTriggerExit(Collider other)
+    private void OnTriggerExit2D(Collider2D other)
     {
         //Check if object is a meteor
         if(other.gameObject.GetComponent<MeteorPhysics>()==null) 
