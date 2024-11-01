@@ -69,4 +69,15 @@ crashlytics-build.properties
 
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
+
+# WWISE stuff
+
+AkWwiseProjectData.asset
+.backup*
+.cache*
+*.akd
+*.prof
+*.validationcache
+*.wsettings
+IncrementalSoundBankData.xml
 /[Aa]ssets/[Ss]treamingAssets/aa/*
