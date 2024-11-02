@@ -38,6 +38,7 @@ public class MeteorSpawning : MonoBehaviour
         GameObject newMeteor = Instantiate(meteor);
         newMeteor.transform.position = generationDirection;
         newMeteor.GetComponent<Rigidbody2D>().velocity = moveDirection;
+        newMeteor.GetComponent<Rigidbody2D>().AddTorque(UnityEngine.Random.value * 0.5f - 0.25f, ForceMode2D.Impulse);
 
 
         newMeteor.GetComponent<MeteorPhysics>().SetDespawnRange(spawnDistance);
@@ -53,13 +54,11 @@ public class MeteorSpawning : MonoBehaviour
         spawnDistance = new Vector2(Camera.main.orthographicSize  * aspect, Camera.main.orthographicSize).magnitude; //This can be moved to update for dynamic changes in resolution but wasnt sure if it was worth it for doing this calculation every frame
 
         timer = GameObject.Find("Timer").GetComponent<Timer>();
-
     }
 
     // Update is called once per frame
     void Update()
     {
-        //TODO: When timer is added, adjust meteor spawn rate
         spawnTime += Time.deltaTime;
 
         float spawnRate = initialSpawnRate + spawnRateIncrease * timer.getTimeElapsed();

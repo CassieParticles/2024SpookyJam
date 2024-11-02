@@ -2,14 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.U2D;
+using UnityEngine.UIElements;
 
 public class MeteorPhysics : MonoBehaviour
 {
 
-    private float angle;
+    //private float angularMoveDir, newMoveDir;
     private bool isSelected;
     private GameObject cursor;
     private Rigidbody2D rb;
+    private SpriteRenderer spriteRenderer;
 
     private float despawnRange = 15;
 
@@ -24,11 +27,15 @@ public class MeteorPhysics : MonoBehaviour
     //Audio related SerializeFields
     [SerializeField] private float flingSoundThreshold = 10;
 
+    [SerializeField] private Sprite[] sprites;
+
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         transform.GetChild(0).gameObject.SetActive(false);
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        spriteRenderer.sprite = sprites[(int) Mathf.Ceil(Random.value * sprites.Length) - 1];
     }
 
     // Update is called once per frame
@@ -37,7 +44,7 @@ public class MeteorPhysics : MonoBehaviour
         if (!exploding) {
             if (isSelected) {
                 rb.velocity += -rb.velocity * grabDrag;
-                if (!ExperimentalFling) {
+                if (!ExperimentalFling) { 
                     rb.velocity += new Vector2(cursor.transform.position.x - rb.position.x, cursor.transform.position.y - rb.position.y) / accelerationDivider;
                 } else {
                     rb.velocity += new Vector2(cursor.transform.position.x - rb.position.x, cursor.transform.position.y - rb.position.y) / rb.velocity.magnitude * accelerationDivider / 4;
@@ -86,7 +93,7 @@ public class MeteorPhysics : MonoBehaviour
 
     public void DeSelect() {
         isSelected = false;
-        if (rb.velocity.magnitude > flingSoundThreshold && !exploding) {
+        if (rb.velocity.magnitude > flingSoundThreshold) {
             
             //Plays the Meteor_Throw event
             AkSoundEngine.PostEvent("Meteor_Throw", this.gameObject);
