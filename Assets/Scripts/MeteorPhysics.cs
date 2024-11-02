@@ -93,4 +93,8 @@ public class MeteorPhysics : MonoBehaviour
     public void SetDespawnRange(float spawnRange) {
         despawnRange = spawnRange + 1;
     }
+
+    public bool IsExploding() {
+        return exploding;
+    }
 }
