@@ -7,8 +7,8 @@ using UnityEngine;
 public class MeteorSpawning : MonoBehaviour
 {
     [SerializeField] private float spawnDistance = 10;   //Figure out the spawn distance
-    [SerializeField] private float randomOffsetRange = 20;
-    [SerializeField] private float meteorInitialSpeed = 5;
+    [SerializeField] private float randomOffsetRange = 10;
+    [SerializeField] private float meteorInitialSpeed = 3;
 
 
     [SerializeField][Range(0.1f, 20)] private float spawnFreq;
