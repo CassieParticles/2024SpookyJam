@@ -28,14 +28,14 @@ public class CursorMovement : MonoBehaviour
         {
             if(objectSelected = objectsIntersecting.First.Value) 
             {
-                //TODO: Call select function within meteor
+                objectSelected.GetComponent<MeteorPhysics>().Select(this.gameObject);
             }
         }
         if(Input.GetMouseButtonUp(0))
         {
             if(objectSelected)
             {
-                //TODO: Call deselect function within meteor
+                objectSelected.GetComponent<MeteorPhysics>().DeSelect();
                 objectSelected = null;
             }
         }
