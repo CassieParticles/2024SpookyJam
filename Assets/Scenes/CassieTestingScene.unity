@@ -196,6 +196,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ship
       objectReference: {fileID: 0}
+    - target: {fileID: 5357191708954056354, guid: c307c47448f26e048b07fe498b8ad376, type: 3}
+      propertyPath: ProgressionIntervals.Array.data[0]
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5357191708954056354, guid: c307c47448f26e048b07fe498b8ad376, type: 3}
+      propertyPath: ProgressionIntervals.Array.data[1]
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5357191708954056354, guid: c307c47448f26e048b07fe498b8ad376, type: 3}
+      propertyPath: ProgressionIntervals.Array.data[2]
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 8539569555395359502, guid: c307c47448f26e048b07fe498b8ad376, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
