@@ -28,6 +28,8 @@ public class PauseMenu : MonoBehaviour
             paused = !paused;
             canvas.SetActive(paused);
             Time.timeScale = paused ? 0 : 1;
+
+            AkSoundEngine.SetState("Music", "Menu");
         }
     }
 
@@ -37,6 +39,8 @@ public class PauseMenu : MonoBehaviour
         paused = false;
         canvas.SetActive(false);
         Time.timeScale = 1;
+
+        AkSoundEngine.SetState("Music", "Gameplay");
     }
 
     public void QuitToMenu()

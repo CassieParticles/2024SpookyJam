@@ -47,7 +47,17 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Player_Damaged" ID="{269A2639-5132-4F1D-8DF1-56F401953836}"/>
+				<Event Name="Player_Damaged" ID="{269A2639-5132-4F1D-8DF1-56F401953836}">
+					<ChildrenList>
+						<Action Name="" ID="{2EEBFD68-3782-447A-A915-7127C5E1275A}" ShortID="633184234">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Player_Damaged" ID="{96077859-86C8-41D1-AF7C-EB173BD6C9BE}" WorkUnitID="{82C3EF6F-9CAE-4937-AE26-4630575489C6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 				<Event Name="Meteor_Throw" ID="{52E115B4-3970-45E1-9283-DCDBAC7C3E27}">
 					<ChildrenList>
 						<Action Name="" ID="{E103D976-FF28-4311-910E-1A48693FA372}" ShortID="54178686">

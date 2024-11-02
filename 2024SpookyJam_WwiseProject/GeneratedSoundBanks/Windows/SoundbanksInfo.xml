@@ -40,7 +40,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{99395EA0-8E84-4460-A057-027362B7F184}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{168A3341-87FB-2EBC-EA60-427BEBC5D065}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -67,6 +67,10 @@
 				<File Id="414592848" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Meteor_Throw_2-1.wav</ShortName>
 					<CachePath>SFX/Meteor_Throw_2-1_818F3B66.wem</CachePath>
+				</File>
+				<File Id="454639775" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Player_Damaged_2.wav</ShortName>
+					<CachePath>SFX/Player_Damaged_2_818F3B66.wem</CachePath>
 				</File>
 				<File Id="496553053" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Celestial Stranding.wav</ShortName>
@@ -103,6 +107,14 @@
 				<File Id="891645477" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Engine_S2.wav</ShortName>
 					<CachePath>SFX/Engine_S2_FBC78EF0.wem</CachePath>
+				</File>
+				<File Id="948899888" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Player_Damaged_3.wav</ShortName>
+					<CachePath>SFX/Player_Damaged_3_818F3B66.wem</CachePath>
+				</File>
+				<File Id="954456882" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Player_Damaged_1.wav</ShortName>
+					<CachePath>SFX/Player_Damaged_1_818F3B66.wem</CachePath>
 				</File>
 			</Media>
 			<Events>
@@ -156,7 +168,13 @@
 						<MediaRef Id="496553053"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1386564838" Name="Player_Damaged" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="1386564838" Name="Player_Damaged" DurationType="OneShot" DurationMin="0.9696857" DurationMax="1.5116841">
+					<MediaRefs>
+						<MediaRef Id="454639775"/>
+						<MediaRef Id="948899888"/>
+						<MediaRef Id="954456882"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="3083087645" Name="Player_Death" DurationType="OneShot" DurationMin="6" DurationMax="6">
 					<MediaRefs>
 						<MediaRef Id="619490783"/>
@@ -171,5 +189,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{B57918C6-0E47-7271-245A-9C12D77BF689}</FileHash>
+	<FileHash>{77C836DC-66AB-8A1A-B70B-A032A220EA49}</FileHash>
 </SoundBanksInfo>
