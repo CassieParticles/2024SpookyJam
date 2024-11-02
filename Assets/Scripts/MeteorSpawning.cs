@@ -35,6 +35,8 @@ public class MeteorSpawning : MonoBehaviour
         newMeteor.transform.position = generationDirection;
         newMeteor.GetComponent<Rigidbody2D>().velocity = moveDirection;
 
+
+        newMeteor.GetComponent<MeteorPhysics>().setDespawnRange(spawnDistance);
     }
 
 
