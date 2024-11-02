@@ -30,4 +30,18 @@ public class PauseMenu : MonoBehaviour
             Time.timeScale = paused ? 0 : 1;
         }
     }
+
+
+    public void Unpause()
+    {
+        paused = false;
+        canvas.SetActive(false);
+        Time.timeScale = 1;
+    }
+
+    public void QuitToMenu()
+    {
+        //TODO: Quit
+    }
+    
 }

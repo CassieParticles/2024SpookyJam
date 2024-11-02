@@ -9,15 +9,25 @@ public class CursorMovement : MonoBehaviour
     private LinkedList<GameObject> objectsIntersecting;
     private GameObject objectSelected;
 
+    private PauseMenu pauseMenu;
+
     void Start()
     {
         cameraObj = GameObject.Find("Main Camera").GetComponent<Camera>(); 
         objectsIntersecting = new LinkedList<GameObject>();
+
+        pauseMenu = GameObject.Find("PauseScreen").GetComponent<PauseMenu>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        //Exit early if game is paused
+        if(pauseMenu.getPaused())
+        {
+            return;
+        }
+
         Vector3 mousePos = Input.mousePosition;
 
         Vector3 cursorPos = cameraObj.ScreenToWorldPoint(mousePos);
