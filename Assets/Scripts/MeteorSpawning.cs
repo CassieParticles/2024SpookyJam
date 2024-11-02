@@ -47,6 +47,13 @@ public class MeteorSpawning : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //TODO: When timer is added, adjust meteor spawn rate
+        spawnTime += Time.deltaTime;
 
+        if(spawnTime > spawnFreq)
+        {
+            spawnTime -= spawnFreq;
+            SpawnMeteor();
+        }
     }
 }
