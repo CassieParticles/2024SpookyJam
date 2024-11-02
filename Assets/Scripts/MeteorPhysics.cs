@@ -10,34 +10,67 @@ public class MeteorPhysics : MonoBehaviour
     private bool isSelected;
     private GameObject cursor;
     private Rigidbody2D rb;
+
     private float despawnRange = 15;
+
+    private float explosionTimer;
+    private bool exploding = false;
+
     [SerializeField][Range(0, 0.1f)] private float grabDrag = 0;
     [SerializeField] private float speedLimit = 10;
+    [SerializeField] private float accelerationDivider = 2; //5 for what we had before
+    [SerializeField] private bool ExperimentalFling;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        transform.GetChild(0).gameObject.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (isSelected) {
-            rb.velocity += -rb.velocity * grabDrag;
-            rb.velocity += new Vector2(cursor.transform.position.x - rb.position.x, cursor.transform.position.y - rb.position.y) / 2;
-            if (rb.velocity.magnitude > speedLimit) {
-                rb.velocity *= speedLimit / rb.velocity.magnitude;
+        if (!exploding) {
+            if (isSelected) {
+                rb.velocity += -rb.velocity * grabDrag;
+                if (!ExperimentalFling) {
+                    rb.velocity += new Vector2(cursor.transform.position.x - rb.position.x, cursor.transform.position.y - rb.position.y) / accelerationDivider;
+                } else {
+                    rb.velocity += new Vector2(cursor.transform.position.x - rb.position.x, cursor.transform.position.y - rb.position.y) / rb.velocity.magnitude * accelerationDivider / 4;
+                }
+                if (rb.velocity.magnitude > speedLimit) {
+                    rb.velocity *= speedLimit / rb.velocity.magnitude;
+                }
+            } else {
+                if (rb.position.magnitude > despawnRange) {
+                    Destroy(gameObject);
+                }
             }
         } else {
-            if (rb.position.magnitude > despawnRange) {
+            explosionTimer += Time.deltaTime;
+            if (explosionTimer > 1) {
                 Destroy(gameObject);
             }
         }
     }
 
     private void OnCollisionEnter2D(Collision2D collision) {
-        //Explode
+        Explode();
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision) {
+        if (collision.name == "Explosion") {
+            Explode();
+        }
+    }
+
+    public void Explode() {
+        exploding = true;
+        rb.velocity = Vector2.zero;
+        GetComponent<SpriteRenderer>().enabled = false;
+        transform.GetChild(0).gameObject.SetActive(true);
+        DeSelect();
     }
 
     public void Select(GameObject selectingCursor) {
@@ -50,7 +83,6 @@ public class MeteorPhysics : MonoBehaviour
     }
 
     public void SetDespawnRange(float spawnRange) {
-        //Here you go Cassie
         despawnRange = spawnRange + 1;
     }
 }
