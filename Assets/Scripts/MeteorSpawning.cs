@@ -36,7 +36,7 @@ public class MeteorSpawning : MonoBehaviour
         newMeteor.GetComponent<Rigidbody2D>().velocity = moveDirection;
 
 
-        newMeteor.GetComponent<MeteorPhysics>().setDespawnRange(spawnDistance);
+        newMeteor.GetComponent<MeteorPhysics>().SetDespawnRange(spawnDistance);
     }
 
 
@@ -44,6 +44,9 @@ public class MeteorSpawning : MonoBehaviour
     void Start()
     {
         spawnTime = 0;
+
+        float aspect = (float)Screen.width / Screen.height;
+        spawnDistance = new Vector2(Camera.main.orthographicSize  * aspect, Camera.main.orthographicSize).magnitude; //This can be moved to update for dynamic changes in resolution but wasnt sure if it was worth it for doing this calculation every frame
     }
 
     // Update is called once per frame
