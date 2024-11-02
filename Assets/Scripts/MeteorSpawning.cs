@@ -7,8 +7,8 @@ using UnityEngine;
 public class MeteorSpawning : MonoBehaviour
 {
     [SerializeField] private float spawnDistance = 10;   //Figure out the spawn distance
-    [SerializeField] private float randomOffsetRange = 20;
-    [SerializeField] private float meteorInitialSpeed = 5;
+    [SerializeField] private float randomOffsetRange = 10;
+    [SerializeField] private float meteorInitialSpeed = 3;
 
 
     [SerializeField][Range(0.1f, 20)] private float spawnFreq;
@@ -35,6 +35,8 @@ public class MeteorSpawning : MonoBehaviour
         newMeteor.transform.position = generationDirection;
         newMeteor.GetComponent<Rigidbody2D>().velocity = moveDirection;
 
+
+        newMeteor.GetComponent<MeteorPhysics>().SetDespawnRange(spawnDistance);
     }
 
 
@@ -42,6 +44,9 @@ public class MeteorSpawning : MonoBehaviour
     void Start()
     {
         spawnTime = 0;
+
+        float aspect = (float)Screen.width / Screen.height;
+        spawnDistance = new Vector2(Camera.main.orthographicSize  * aspect, Camera.main.orthographicSize).magnitude; //This can be moved to update for dynamic changes in resolution but wasnt sure if it was worth it for doing this calculation every frame
     }
 
     // Update is called once per frame
