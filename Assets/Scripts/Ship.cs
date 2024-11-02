@@ -16,9 +16,12 @@ public class Ship : MonoBehaviour
     //Get the ship in various states
     [SerializeField] private Sprite[] shipStates = new Sprite[5]{ null,null,null,null,null};
 
+    //Timer, used for engine sprites and to increase time remaining
+    private Timer timer;
+
     private void Start()
     {
-        
+        timer = GameObject.Find("Timer").GetComponent<Timer>();
     }
 
     private void Update()
