@@ -6,9 +6,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	1386564838	Player_Damaged			\Default Work Unit\Player_Damaged	
 	1598298728	Music_Menu			\Default Work Unit\Music_Menu	
 	2461894715	States_Music			\Default Work Unit\States_Music	
-	2614347192	Engine_S3			\Default Work Unit\Engine_S3	
-	2614347193	Engine_S2			\Default Work Unit\Engine_S2	
-	2614347199	Engine_S4			\Default Work Unit\Engine_S4	
+	2903516312	States_Engine			\Default Work Unit\States_Engine	
 	3083087645	Player_Death			\Default Work Unit\Player_Death	
 	3809331500	Meteor_Throw			\Default Work Unit\Meteor_Throw	
 

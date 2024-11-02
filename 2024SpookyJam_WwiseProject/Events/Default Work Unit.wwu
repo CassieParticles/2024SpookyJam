@@ -87,39 +87,6 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Engine_S2" ID="{77D2B659-C1E2-47CE-AF91-D0B413F5D993}">
-					<ChildrenList>
-						<Action Name="" ID="{0676A621-1960-4978-A7E5-07A14E598E49}" ShortID="621269282">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Engine_S2" ID="{ED82A025-C83A-4F9A-9E84-CCC64E783A12}" WorkUnitID="{82C3EF6F-9CAE-4937-AE26-4630575489C6}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Engine_S3" ID="{B2CDD2DA-B74B-4EE6-ACCA-A4DF27AFFCB7}">
-					<ChildrenList>
-						<Action Name="" ID="{89103F48-BFDE-4FF3-9F69-EA39024B1A15}" ShortID="1040629416">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Engine_S3" ID="{1399BF04-37BB-4E94-B47E-3E319235AC3B}" WorkUnitID="{82C3EF6F-9CAE-4937-AE26-4630575489C6}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Engine_S4" ID="{9187DA90-E151-4D10-B09F-6E09D0E42498}">
-					<ChildrenList>
-						<Action Name="" ID="{3F8A9ADE-74D3-426C-BA28-B163DBA80E21}" ShortID="877817096">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Engine_S4" ID="{6381C809-D00D-4B58-9A02-C10F93C8DC78}" WorkUnitID="{82C3EF6F-9CAE-4937-AE26-4630575489C6}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
 				<Event Name="Music_Gameplay" ID="{80FB01D2-9E78-4884-97D4-BEF54D357596}">
 					<ChildrenList>
 						<Action Name="" ID="{5855E460-7FB8-475B-B6C5-83967031247C}" ShortID="654191870">
@@ -142,23 +109,23 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="States_Engine" ID="{EC4CCE2A-1863-4F89-B482-202D1751E397}">
+				<Event Name="States_Engine" ID="{78A0970A-4441-47B5-AF9B-3AA22D3D3F46}">
 					<ChildrenList>
-						<Action Name="" ID="{83155E68-FD1C-4CBE-ACC0-6D99421745AC}" ShortID="158361738">
+						<Action Name="" ID="{AE98ADF0-7694-410B-A363-FED67A52B78D}" ShortID="478839162">
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Engine_S2" ID="{ED82A025-C83A-4F9A-9E84-CCC64E783A12}" WorkUnitID="{82C3EF6F-9CAE-4937-AE26-4630575489C6}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
-						<Action Name="" ID="{60C98BE3-2B2B-4E29-B43F-41ABB34761A5}" ShortID="753981857">
+						<Action Name="" ID="{7F6E7864-AC1E-4389-863C-90D1216B7756}" ShortID="150156464">
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Engine_S3" ID="{1399BF04-37BB-4E94-B47E-3E319235AC3B}" WorkUnitID="{82C3EF6F-9CAE-4937-AE26-4630575489C6}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
-						<Action Name="" ID="{D6861049-DD3D-48EB-9C69-CA7A09DF108C}" ShortID="1024034490">
+						<Action Name="" ID="{65B3DF36-0BBE-4C53-A73B-4CBABF985505}" ShortID="592808526">
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Engine_S4" ID="{6381C809-D00D-4B58-9A02-C10F93C8DC78}" WorkUnitID="{82C3EF6F-9CAE-4937-AE26-4630575489C6}"/>

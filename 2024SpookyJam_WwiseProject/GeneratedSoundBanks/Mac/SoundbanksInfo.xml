@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{12D574FE-82C5-FBDA-D5F0-8BD18E960377}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{F8011285-BEB5-567E-8C0E-BB199468D366}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -41,7 +41,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{C1BD245A-2880-989C-736B-A7C7CBA07375}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{00C3C852-C088-CD20-0D94-AF8A59CECB4A}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -126,21 +126,6 @@
 						<MediaRef Id="881738276"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2614347193" Name="Engine_S2" DurationType="Infinite">
-					<MediaRefs>
-						<MediaRef Id="891645477"/>
-					</MediaRefs>
-				</Event>
-				<Event Id="2614347192" Name="Engine_S3" DurationType="Infinite">
-					<MediaRefs>
-						<MediaRef Id="323987161"/>
-					</MediaRefs>
-				</Event>
-				<Event Id="2614347199" Name="Engine_S4" DurationType="Infinite">
-					<MediaRefs>
-						<MediaRef Id="263425952"/>
-					</MediaRefs>
-				</Event>
 				<Event Id="809529563" Name="Meteor_Explode" DurationType="OneShot" DurationMin="0.7785252" DurationMax="1.2358316">
 					<MediaRefs>
 						<MediaRef Id="278788037"/>
@@ -181,6 +166,13 @@
 						<MediaRef Id="619490783"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="2903516312" Name="States_Engine" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="263425952"/>
+						<MediaRef Id="323987161"/>
+						<MediaRef Id="891645477"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="2461894715" Name="States_Music" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="496553053"/>
@@ -190,5 +182,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{01B0FC18-FED6-3434-C606-C574407BFAA7}</FileHash>
+	<FileHash>{0F390C1B-3DEC-549D-469F-79E9D24B0836}</FileHash>
 </SoundBanksInfo>

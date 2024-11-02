@@ -66,6 +66,30 @@ public class Ship : MonoBehaviour
                 {
                     currentEngineState = Mathf.Min(i + engineStageOffset,engineStates.Length - 1);
                     engineGO.GetComponent<SpriteRenderer>().sprite = engineStates[currentEngineState];
+
+                    if (currentEngineState == 3)
+                    {
+                        //Sets the "Music" State Group's active State to "Menu"
+                        AkSoundEngine.SetState("Engine", "Stage1");
+                    }
+
+                    if (currentEngineState == 2)
+                    {
+                        //Sets the "Music" State Group's active State to "Menu"
+                        AkSoundEngine.SetState("Engine", "Stage2");
+                    }
+
+                    if (currentEngineState == 1)
+                    {
+                        //Sets the "Music" State Group's active State to "Menu"
+                        AkSoundEngine.SetState("Engine", "Stage3");
+                    }
+
+                    if (currentEngineState == 0)
+                    {
+                        //Sets the "Music" State Group's active State to "Menu"
+                        AkSoundEngine.SetState("Engine", "Stage4");
+                    }
                 }
                 //Don't continue
                 break;
@@ -97,6 +121,8 @@ public class Ship : MonoBehaviour
         AkSoundEngine.PostEvent("Player_Death", this.gameObject);
         //Sets the "Music" State Group's active State to "Menu"
         AkSoundEngine.SetState("Music", "Death");
+        //Sets the "Music" State Group's active State to "Menu"
+        AkSoundEngine.SetState("Engine", "Stage1");
 
         //TEMP
         Destroy(gameObject);
