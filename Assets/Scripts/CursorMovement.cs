@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class CursorMovement : MonoBehaviour
@@ -44,7 +45,7 @@ public class CursorMovement : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         MeteorPhysics meteorComp = collision.gameObject.GetComponent<MeteorPhysics>();
-        if(meteorComp != null) 
+        if(meteorComp != null && collision.name != "Explosion") 
         {
             //If game object has meteor component
             foreach(GameObject g in objectsIntersecting)
