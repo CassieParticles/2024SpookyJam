@@ -171,6 +171,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7477126237375553403, guid: 1ce8cbd5c5d5d1041af0b0ccd5d42609, type: 3}
+      propertyPath: meteorInitialSpeed
+      value: 4.5
+      objectReference: {fileID: 0}
     - target: {fileID: 8784417597585611973, guid: 1ce8cbd5c5d5d1041af0b0ccd5d42609, type: 3}
       propertyPath: m_Name
       value: MeteorManager
@@ -426,6 +430,18 @@ PrefabInstance:
     - target: {fileID: 309246028499770398, guid: ec007052017065243be8dc1cda2216d9, type: 3}
       propertyPath: m_Name
       value: Cursor
+      objectReference: {fileID: 0}
+    - target: {fileID: 1004313340047444890, guid: ec007052017065243be8dc1cda2216d9, type: 3}
+      propertyPath: m_Size.x
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1004313340047444890, guid: ec007052017065243be8dc1cda2216d9, type: 3}
+      propertyPath: m_Size.y
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1004313340047444890, guid: ec007052017065243be8dc1cda2216d9, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: 3729947933092539024, guid: ec007052017065243be8dc1cda2216d9, type: 3}
       propertyPath: cursorSize

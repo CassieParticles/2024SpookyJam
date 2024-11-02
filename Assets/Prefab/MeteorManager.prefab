@@ -44,8 +44,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c3e584ab067f5b4aae86f141755e4d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnDistance: 10
   randomOffsetRange: 20
   meteorInitialSpeed: 5
-  spawnFreq: 1
+  initialSpawnRate: 0.5
+  spawnRateIncrease: 0.05
+  maxSpawnRate: 5
   meteor: {fileID: 555478232569384986, guid: 4ceed897610559f4b9fd1d7e2c9300f4, type: 3}
