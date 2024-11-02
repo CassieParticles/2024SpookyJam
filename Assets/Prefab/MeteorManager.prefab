@@ -41,8 +41,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 8784417597585611973}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3cb38a7e07436547a44ba2e33d9df44, type: 3}
+  m_Script: {fileID: 11500000, guid: 7c3e584ab067f5b4aae86f141755e4d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnFreq: 0.1
+  spawnDistance: 10
+  randomOffsetRange: 20
+  meteorInitialSpeed: 5
+  spawnFreq: 1
   meteor: {fileID: 555478232569384986, guid: 4ceed897610559f4b9fd1d7e2c9300f4, type: 3}
