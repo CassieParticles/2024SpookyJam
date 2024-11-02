@@ -16,11 +16,16 @@ public class Ship : MonoBehaviour
     //When the user takes damage, what the time is set to
     [SerializeField] private float[] ProgressionIntervals = new float[3] { 2,5,10 };
 
+    [SerializeField] private float engineDamageOffsetTime = 5.0f;
 
     //Get the ship in various states
     [SerializeField] private Sprite[] shipStates = new Sprite[5]{ null,null,null,null,null};
     [SerializeField] private Sprite[] engineStates = new Sprite[3] { null, null, null };
+    int currentEngineState = -1;
 
+    private GameObject engineGO;
+    private int engineStageOffset = 0;
+    private float engineStageOffsetTimer = 0;
     //Timer, used for engine sprites and to increase time remaining
     private Timer timer;
 
@@ -37,6 +42,8 @@ public class Ship : MonoBehaviour
         timer.setTimeRemaining(ProgressionIntervals[ProgressionIntervals.Length-1]);
         //fetches crewspawning script
         crewSpawner = CrewSpawnerObj.GetComponent<CrewSpawner>();
+
+        engineGO = gameObject.transform.GetChild(0).gameObject;
     }
 
     private void Update()
@@ -47,6 +54,31 @@ public class Ship : MonoBehaviour
             if (deathTimer > deathAnimTime)
             {
                 DeathEnd();
+            }
+        }
+
+        for(int i=0;i<ProgressionIntervals.Length;i++)
+        {
+            //Check which band it's in
+            if(timer.getTimeLeft() < ProgressionIntervals[i])
+            {
+                if(currentEngineState + engineStageOffset != i)
+                {
+                    currentEngineState = Mathf.Min(i + engineStageOffset,engineStates.Length - 1);
+                    engineGO.GetComponent<SpriteRenderer>().sprite = engineStates[currentEngineState];
+                }
+                //Don't continue
+                break;
+            }
+        }
+        //temporarily change engine sprite
+        if(engineStageOffset==1)
+        {
+            engineStageOffsetTimer += Time.deltaTime;
+            if(engineStageOffsetTimer > engineDamageOffsetTime)
+            {
+                engineStageOffset = 0;
+                engineStageOffsetTimer = 0;
             }
         }
     }
@@ -75,10 +107,12 @@ public class Ship : MonoBehaviour
             {
                 return;
             }
+
             //Add a check if meteor is active once one exists
             //TEMP, will call meteor explode function
-            Destroy(collision.gameObject);
+            collision.gameObject.GetComponent<MeteorPhysics>().Explode();
             lives--;
+            engineStageOffset = 1;
             //triggers crew spawn on collision
             crewSpawner.SpawnCrew();
             for (int i = 0; i < ProgressionIntervals.Length; ++i)
@@ -86,6 +120,7 @@ public class Ship : MonoBehaviour
                 if (ProgressionIntervals[i] > timer.getTimeLeft())
                 {
                     timer.setTimeRemaining(ProgressionIntervals[i]);
+                    break;
                 }
             }
 
