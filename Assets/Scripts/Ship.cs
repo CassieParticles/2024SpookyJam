@@ -23,13 +23,19 @@ public class Ship : MonoBehaviour
     //Timer, used for engine sprites and to increase time remaining
     private Timer timer;
 
+    //Get the Crew Spawner
+    [SerializeField] private GameObject CrewSpawnerObj;
+    private CrewSpawner crewSpawner;
+
     private void Start()
     {
         timer = GameObject.Find("Timer").GetComponent<Timer>();
 
         //Set the timer to max time
         //TODO: Add beginning time for tutorial
-        timer.setTimeRemaining(ProgressionIntervals[ProgressionIntervals.Length-1]);   
+        timer.setTimeRemaining(ProgressionIntervals[ProgressionIntervals.Length-1]);
+        //fetches crewspawning script
+        crewSpawner = CrewSpawnerObj.GetComponent<CrewSpawner>();
     }
 
     private void Update()
@@ -72,8 +78,9 @@ public class Ship : MonoBehaviour
             //TEMP, will call meteor explode function
             Destroy(collision.gameObject);
             lives--;
-
-            for(int i = 0; i < ProgressionIntervals.Length; ++i)
+            //triggers crew spawn on collision
+            crewSpawner.SpawnCrew();
+            for (int i = 0; i < ProgressionIntervals.Length; ++i)
             {
                 if (ProgressionIntervals[i] > timer.getTimeLeft())
                 {
@@ -89,4 +96,6 @@ public class Ship : MonoBehaviour
 
         }
     }
+
+   
 }

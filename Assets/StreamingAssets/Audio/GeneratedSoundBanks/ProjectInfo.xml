@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ProjectInfo>
+	<Project Name="2024SpookyJam_WwiseProject" GUID="{B35E3CBA-465A-4F8A-A06D-E1F32EF682B4}" Generator="2023.1.6.8555"/>
+	<CacheRoot>../../../../2024SpookyJam_WwiseProject/.cache</CacheRoot>
+	<Platforms>
+		<Platform Name="Mac" GUID="{A3A94E5E-C205-4B64-A974-BB5CD2DB3AE5}" BasePlatform="Mac" BasePlatformGUID="{9C6217D5-DD11-4795-87C1-6CE02853C540}" Path="../../../../2024SpookyJam_WwiseProject/GeneratedSoundBanks/Mac"/>
+		<Platform Name="Windows" GUID="{6311E62C-D9CE-4CD9-BA56-FE0FFBFC7513}" BasePlatform="Windows" BasePlatformGUID="{6E0CB257-C6C8-4C5C-8366-2740DFC441EB}" Path="../../../../2024SpookyJam_WwiseProject/GeneratedSoundBanks/Windows"/>
+	</Platforms>
+	<Languages>
+		<Language Name="English(US)" Id="684519430" GUID="{64CB7F8D-A40A-47FD-9C33-F6F964BB5B87}" Default="true" UseAsStandIn="true"/>
+	</Languages>
+	<FileHash>{A646B2F4-B1C6-B5F9-C87A-8E4EE28C4DE0}</FileHash>
+</ProjectInfo>
