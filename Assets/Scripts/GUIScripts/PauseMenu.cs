@@ -18,7 +18,10 @@ public class PauseMenu : MonoBehaviour
         canvas = gameObject.transform.GetChild(0).gameObject;
         canvas.SetActive(false);
         paused = false;
-        
+
+        //Sets the "Music" State Group's active State to "Gameplay"
+        AkSoundEngine.SetState("Music", "Gameplay");
+
     }
 
     private void Update()
@@ -28,8 +31,7 @@ public class PauseMenu : MonoBehaviour
             paused = !paused;
             canvas.SetActive(paused);
             Time.timeScale = paused ? 0 : 1;
-
-            AkSoundEngine.SetState("Music", "Menu");
+            MusicStates(paused);
         }
     }
 
@@ -40,12 +42,30 @@ public class PauseMenu : MonoBehaviour
         canvas.SetActive(false);
         Time.timeScale = 1;
 
-        AkSoundEngine.SetState("Music", "Gameplay");
+        //Plays the Button_Click event
+        AkSoundEngine.PostEvent("Button_Click", this.gameObject);
     }
 
     public void QuitToMenu()
     {
         //TODO: Quit
+
+        //Plays the Button_Click event
+        AkSoundEngine.PostEvent("Button_Click", this.gameObject);
+    }
+
+    public void MusicStates(bool state)
+    {
+        if (state == true)
+        {
+            //Sets the "Music" State Group's active State to "Menu"
+            AkSoundEngine.SetState("Music", "Menu");
+        }
+        else
+        {
+            //Sets the "Music" State Group's active State to "Gameplay"
+            AkSoundEngine.SetState("Music", "Gameplay");
+        }
     }
     
 }

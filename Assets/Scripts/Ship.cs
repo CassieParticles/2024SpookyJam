@@ -92,7 +92,12 @@ public class Ship : MonoBehaviour
     private void DeathEnd() 
     {
         //Death stuff
+
+        //Plays the Player_Damaged event
         AkSoundEngine.PostEvent("Player_Death", this.gameObject);
+        //Sets the "Music" State Group's active State to "Menu"
+        AkSoundEngine.SetState("Music", "Death");
+
         //TEMP
         Destroy(gameObject);
     }
@@ -113,6 +118,10 @@ public class Ship : MonoBehaviour
             collision.gameObject.GetComponent<MeteorPhysics>().Explode();
             lives--;
             engineStageOffset = 1;
+
+            //Plays the Player_Damaged event
+            AkSoundEngine.PostEvent("Player_Damaged", this.gameObject);
+
             //triggers crew spawn on collision
             crewSpawner.SpawnCrew();
             for (int i = 0; i < ProgressionIntervals.Length; ++i)

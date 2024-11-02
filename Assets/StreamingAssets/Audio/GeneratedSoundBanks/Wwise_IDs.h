@@ -49,6 +49,7 @@ namespace AK
 
             namespace STATE
             {
+                static const AkUniqueID DEATH = 779278001U;
                 static const AkUniqueID GAMEPLAY = 89505537U;
                 static const AkUniqueID MENU = 2607556080U;
                 static const AkUniqueID NONE = 748895195U;

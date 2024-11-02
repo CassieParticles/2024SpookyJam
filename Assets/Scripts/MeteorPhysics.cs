@@ -75,7 +75,7 @@ public class MeteorPhysics : MonoBehaviour
         transform.GetChild(0).gameObject.SetActive(true);
         DeSelect();
 
-        //Play your explosion audio here
+        //Plays the Meteor_Explode event
         AkSoundEngine.PostEvent("Meteor_Explode", this.gameObject);
     }
 
@@ -87,7 +87,8 @@ public class MeteorPhysics : MonoBehaviour
     public void DeSelect() {
         isSelected = false;
         if (rb.velocity.magnitude > flingSoundThreshold && !exploding) {
-            //Play your flinging audio here Rebecca
+            
+            //Plays the Meteor_Throw event
             AkSoundEngine.PostEvent("Meteor_Throw", this.gameObject);
         }
     }

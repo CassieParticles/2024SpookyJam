@@ -11,6 +11,7 @@
 						<State Name="None" ID="{6ED550F7-455D-4D06-A1DB-929A39B8AA66}"/>
 						<State Name="Menu" ID="{E890CC0D-300C-450B-B8E3-E7A556E34E33}"/>
 						<State Name="Gameplay" ID="{197DD05A-24D8-4B4F-ABE1-B68EA1BB5F01}"/>
+						<State Name="Death" ID="{AA56790F-5C0F-42E2-BCA8-991C6C194BA0}"/>
 					</ChildrenList>
 					<TransitionList>
 						<Transition>

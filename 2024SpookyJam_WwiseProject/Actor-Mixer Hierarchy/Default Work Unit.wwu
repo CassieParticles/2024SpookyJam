@@ -696,6 +696,14 @@
 						</StateGroupList>
 						<CustomStateList>
 							<CustomState>
+								<StateRef Name="Death" ID="{AA56790F-5C0F-42E2-BCA8-991C6C194BA0}"/>
+								<CustomState Name="" ID="{8FEFB0EF-C2E8-47D7-BCA0-3DC0F356DF41}" ShortID="327421523">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64" Value="-108"/>
+									</PropertyList>
+								</CustomState>
+							</CustomState>
+							<CustomState>
 								<StateRef Name="Menu" ID="{E890CC0D-300C-450B-B8E3-E7A556E34E33}"/>
 								<CustomState Name="" ID="{FC1FBA9A-13F2-4FE7-B27B-E0C7A4041712}" ShortID="919238962"/>
 							</CustomState>
@@ -718,7 +726,7 @@
 						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
-								<Value>-6</Value>
+								<Value>-3</Value>
 							</ValueList>
 						</Property>
 					</PropertyList>
@@ -746,6 +754,14 @@
 							</StateGroupInfo>
 						</StateGroupList>
 						<CustomStateList>
+							<CustomState>
+								<StateRef Name="Death" ID="{AA56790F-5C0F-42E2-BCA8-991C6C194BA0}"/>
+								<CustomState Name="" ID="{C531545F-06CF-4915-91CD-5CF595624485}" ShortID="883692094">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64" Value="-108"/>
+									</PropertyList>
+								</CustomState>
+							</CustomState>
 							<CustomState>
 								<StateRef Name="Menu" ID="{E890CC0D-300C-450B-B8E3-E7A556E34E33}"/>
 								<CustomState Name="" ID="{1DE06B4D-0EA7-481F-8EB8-4FB1E3596D1A}" ShortID="813585706">

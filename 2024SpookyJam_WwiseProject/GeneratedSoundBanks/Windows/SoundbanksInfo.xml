@@ -35,12 +35,13 @@
 					<States>
 						<State Id="89505537" Name="Gameplay"/>
 						<State Id="748895195" Name="None"/>
+						<State Id="779278001" Name="Death"/>
 						<State Id="2607556080" Name="Menu"/>
 					</States>
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{168A3341-87FB-2EBC-EA60-427BEBC5D065}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{C1BD245A-2880-989C-736B-A7C7CBA07375}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -189,5 +190,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{77C836DC-66AB-8A1A-B70B-A032A220EA49}</FileHash>
+	<FileHash>{DC8459F5-9D3D-FD1F-FDA4-C420F5743177}</FileHash>
 </SoundBanksInfo>
