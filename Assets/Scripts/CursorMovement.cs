@@ -13,6 +13,7 @@ public class CursorMovement : MonoBehaviour
     {
         cameraObj = GameObject.Find("Main Camera").GetComponent<Camera>(); 
         objectsIntersecting = new LinkedList<GameObject>();
+        AkSoundEngine.PostEvent("Music_Gameplay", this.gameObject);
     }
 
     // Update is called once per frame
@@ -30,6 +31,7 @@ public class CursorMovement : MonoBehaviour
             if(objectSelected = objectsIntersecting.First.Value) 
             {
                 objectSelected.GetComponent<MeteorPhysics>().Select(this.gameObject);
+                AkSoundEngine.PostEvent("Meteor_Grab", this.gameObject);
             }
         }
         if(Input.GetMouseButtonUp(0))

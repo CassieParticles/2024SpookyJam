@@ -22,7 +22,7 @@ public class MeteorPhysics : MonoBehaviour
     [SerializeField] private bool ExperimentalFling;
 
     //Audio related SerializeFields
-    [SerializeField] private float flingSoundThreshold = 30;
+    [SerializeField] private float flingSoundThreshold = 10;
 
     // Start is called before the first frame update
     void Start()
@@ -76,6 +76,7 @@ public class MeteorPhysics : MonoBehaviour
         DeSelect();
 
         //Play your explosion audio here
+        AkSoundEngine.PostEvent("Meteor_Explode", this.gameObject);
     }
 
     public void Select(GameObject selectingCursor) {
@@ -87,6 +88,7 @@ public class MeteorPhysics : MonoBehaviour
         isSelected = false;
         if (rb.velocity.magnitude > flingSoundThreshold && !exploding) {
             //Play your flinging audio here Rebecca
+            AkSoundEngine.PostEvent("Meteor_Throw", this.gameObject);
         }
     }
 

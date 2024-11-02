@@ -1,27 +1,35 @@
 Event	ID	Name			Wwise Object Path	Notes
+	620878633	Music_Gameplay			\Default Work Unit\Music_Gameplay	
 	809529563	Meteor_Explode			\Default Work Unit\Meteor_Explode	
 	814543256	Button_Click			\Default Work Unit\Button_Click	
 	1149410026	Meteor_Grab			\Default Work Unit\Meteor_Grab	
 	1386564838	Player_Damaged			\Default Work Unit\Player_Damaged	
+	1598298728	Music_Menu			\Default Work Unit\Music_Menu	
+	2461894715	States_Music			\Default Work Unit\States_Music	
 	2614347192	Engine_S3			\Default Work Unit\Engine_S3	
 	2614347193	Engine_S2			\Default Work Unit\Engine_S2	
 	2614347199	Engine_S4			\Default Work Unit\Engine_S4	
 	3083087645	Player_Death			\Default Work Unit\Player_Death	
 	3809331500	Meteor_Throw			\Default Work Unit\Meteor_Throw	
-	3991942870	Music			\Default Work Unit\Music	
 
 State Group	ID	Name			Wwise Object Path	Notes
+	268529915	Engine			\Default Work Unit\Engine	
 	3991942870	Music			\Default Work Unit\Music	
 
 State	ID	Name	State Group			Notes
+	748895195	None	Engine			
+	936729720	Stage3	Engine			
+	936729721	Stage2	Engine			
+	936729722	Stage1	Engine			
+	936729727	Stage4	Engine			
 	89505537	Gameplay	Music			
 	748895195	None	Music			
 	2607556080	Menu	Music			
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	263425952	Engine_S4	C:\Users\flynn\GitHub\2024SpookyJam\2024SpookyJam_WwiseProject\.cache\Windows\SFX\Engine_S4_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Engine_S4		5760096
+	263425952	Engine_S4	C:\Users\flynn\GitHub\2024SpookyJam\2024SpookyJam_WwiseProject\.cache\Windows\SFX\Engine_S4_FBC78EF0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Engine_S4		5760096
 	278788037	Meteor_Explode	C:\Users\flynn\GitHub\2024SpookyJam\2024SpookyJam_WwiseProject\.cache\Windows\SFX\Meteor_Explode_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Meteor_Explode		163412
-	323987161	Engine_S3	C:\Users\flynn\GitHub\2024SpookyJam\2024SpookyJam_WwiseProject\.cache\Windows\SFX\Engine_S3_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Engine_S3		5760096
+	323987161	Engine_S3	C:\Users\flynn\GitHub\2024SpookyJam\2024SpookyJam_WwiseProject\.cache\Windows\SFX\Engine_S3_FBC78EF0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Engine_S3		5760096
 	360389266	Button_Click_1	C:\Users\flynn\GitHub\2024SpookyJam\2024SpookyJam_WwiseProject\.cache\Windows\SFX\Button_Click_1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Button_Clicks\Button_Click_1		417888
 	403695054	Button_Click_3	C:\Users\flynn\GitHub\2024SpookyJam\2024SpookyJam_WwiseProject\.cache\Windows\SFX\Button_Click_3_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Button_Clicks\Button_Click_3		47872
 	414592848	Meteor_Throw_2-1	C:\Users\flynn\GitHub\2024SpookyJam\2024SpookyJam_WwiseProject\.cache\Windows\SFX\Meteor_Throw_2-1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Meteor_Throws\Meteor_Throw_2-1		138304
