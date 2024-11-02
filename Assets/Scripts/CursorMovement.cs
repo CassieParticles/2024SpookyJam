@@ -53,7 +53,7 @@ public class CursorMovement : MonoBehaviour
                 //Check if meteor comp is already in list (won't be but good to check)
                 if(g.GetComponent<MeteorPhysics>()==meteorComp)
                 {
-                    Debug.Log("Something went wrong");
+                    //Debug.Log("Something went wrong");
                     return; //If more needs to happen after this, change return with something else to prevent adding
                 }
             }
