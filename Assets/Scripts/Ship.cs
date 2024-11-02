@@ -59,7 +59,7 @@ public class Ship : MonoBehaviour
     private void DeathEnd() 
     {
         //Death stuff
-
+        AkSoundEngine.PostEvent("Player_Death", this.gameObject);
         //TEMP
         Destroy(gameObject);
     }

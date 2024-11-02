@@ -21,6 +21,26 @@
 						</Transition>
 					</TransitionList>
 				</StateGroup>
+				<StateGroup Name="Engine" ID="{B3301751-49DF-4AA4-9A31-2EBD0323FDC9}">
+					<PropertyList>
+						<Property Name="DefaultTransitionTime" Type="Real64" Value="1.5"/>
+					</PropertyList>
+					<ChildrenList>
+						<State Name="None" ID="{182E2C69-011B-461C-83B9-E3D8E923853F}"/>
+						<State Name="Stage1" ID="{823D6E9F-931F-4526-9A18-6CCAC4B44A57}"/>
+						<State Name="Stage2" ID="{CF0FCA24-3584-4DD7-9E23-F87CA1771A72}"/>
+						<State Name="Stage3" ID="{5FD84089-DFFC-4478-9DF1-43D08D61026D}"/>
+						<State Name="Stage4" ID="{503AE9DD-8ED1-4933-BB15-C71B60B70472}"/>
+					</ChildrenList>
+					<TransitionList>
+						<Transition>
+							<StartState Name="None" ID="{182E2C69-011B-461C-83B9-E3D8E923853F}"/>
+							<EndState Name="Stage1" ID="{823D6E9F-931F-4526-9A18-6CCAC4B44A57}"/>
+							<Time>0</Time>
+							<IsShared>false</IsShared>
+						</Transition>
+					</TransitionList>
+				</StateGroup>
 			</ChildrenList>
 		</WorkUnit>
 	</States>

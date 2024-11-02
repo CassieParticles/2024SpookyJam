@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{73E5D9E3-974E-C7D1-E38D-6B0DC16ABCBF}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{12D574FE-82C5-FBDA-D5F0-8BD18E960377}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -22,6 +22,15 @@
 				<Bus Id="3803692087" Name="Master Audio Bus"/>
 			</Busses>
 			<StateGroups>
+				<StateGroup Id="268529915" Name="Engine">
+					<States>
+						<State Id="748895195" Name="None"/>
+						<State Id="936729720" Name="Stage3"/>
+						<State Id="936729721" Name="Stage2"/>
+						<State Id="936729722" Name="Stage1"/>
+						<State Id="936729727" Name="Stage4"/>
+					</States>
+				</StateGroup>
 				<StateGroup Id="3991942870" Name="Music">
 					<States>
 						<State Id="89505537" Name="Gameplay"/>
@@ -31,13 +40,13 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{0D4EC577-34C9-DC62-2DED-20E3DF8D1F4D}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{99395EA0-8E84-4460-A057-027362B7F184}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
 				<File Id="263425952" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Engine_S4.wav</ShortName>
-					<CachePath>SFX/Engine_S4_818F3B66.wem</CachePath>
+					<CachePath>SFX/Engine_S4_FBC78EF0.wem</CachePath>
 				</File>
 				<File Id="278788037" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Meteor_Explode.wav</ShortName>
@@ -45,7 +54,7 @@
 				</File>
 				<File Id="323987161" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Engine_S3.wav</ShortName>
-					<CachePath>SFX/Engine_S3_818F3B66.wem</CachePath>
+					<CachePath>SFX/Engine_S3_FBC78EF0.wem</CachePath>
 				</File>
 				<File Id="360389266" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Button_Click_1.wav</ShortName>
@@ -109,12 +118,12 @@
 						<MediaRef Id="891645477"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2614347192" Name="Engine_S3" DurationType="OneShot" DurationMin="30" DurationMax="30">
+				<Event Id="2614347192" Name="Engine_S3" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="323987161"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2614347199" Name="Engine_S4" DurationType="OneShot" DurationMin="30" DurationMax="30">
+				<Event Id="2614347199" Name="Engine_S4" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="263425952"/>
 					</MediaRefs>
@@ -137,10 +146,14 @@
 						<MediaRef Id="890956820"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3991942870" Name="Music" DurationType="Infinite">
+				<Event Id="620878633" Name="Music_Gameplay" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="624017459"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1598298728" Name="Music_Menu" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="496553053"/>
-						<MediaRef Id="624017459"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="1386564838" Name="Player_Damaged" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
@@ -149,8 +162,14 @@
 						<MediaRef Id="619490783"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="2461894715" Name="States_Music" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="496553053"/>
+						<MediaRef Id="624017459"/>
+					</MediaRefs>
+				</Event>
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{F76E078C-6976-33C2-6BA2-CCD0D32A17AC}</FileHash>
+	<FileHash>{A1F7E10C-A6F3-4CB8-91F2-20D1ED929493}</FileHash>
 </SoundBanksInfo>
