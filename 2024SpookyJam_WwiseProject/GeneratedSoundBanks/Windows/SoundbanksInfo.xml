@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="150">
+	<RootPaths>
+		<ProjectRoot>../..</ProjectRoot>
+		<SourceFilesRoot>../../.cache/Windows</SourceFilesRoot>
+		<SoundBanksRoot>.</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>.</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<SoundBanks>
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{9767AD2F-9F12-F10B-FDE5-F9846DC13D59}">
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+			<Plugins>
+				<AudioDevices>
+					<Plugin Id="2317455096" Name="No_Output" LibName="No Output" LibId="11862023"/>
+					<Plugin Id="3859886410" Name="System" LibName="System" LibId="11403271"/>
+				</AudioDevices>
+			</Plugins>
+			<Busses>
+				<Bus Id="3803692087" Name="Master Audio Bus"/>
+			</Busses>
+			<StateGroups>
+				<StateGroup Id="3991942870" Name="Music">
+					<States>
+						<State Id="89505537" Name="Gameplay"/>
+						<State Id="748895195" Name="None"/>
+						<State Id="2607556080" Name="Menu"/>
+					</States>
+				</StateGroup>
+			</StateGroups>
+		</SoundBank>
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{0D4EC577-34C9-DC62-2DED-20E3DF8D1F4D}">
+			<ShortName>Main</ShortName>
+			<Path>Main.bnk</Path>
+			<Media>
+				<File Id="263425952" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Engine_S4.wav</ShortName>
+					<CachePath>SFX/Engine_S4_818F3B66.wem</CachePath>
+				</File>
+				<File Id="278788037" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Meteor_Explode.wav</ShortName>
+					<CachePath>SFX/Meteor_Explode_818F3B66.wem</CachePath>
+				</File>
+				<File Id="323987161" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Engine_S3.wav</ShortName>
+					<CachePath>SFX/Engine_S3_818F3B66.wem</CachePath>
+				</File>
+				<File Id="360389266" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Button_Click_1.wav</ShortName>
+					<CachePath>SFX/Button_Click_1_818F3B66.wem</CachePath>
+				</File>
+				<File Id="403695054" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Button_Click_3.wav</ShortName>
+					<CachePath>SFX/Button_Click_3_818F3B66.wem</CachePath>
+				</File>
+				<File Id="414592848" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Meteor_Throw_2-1.wav</ShortName>
+					<CachePath>SFX/Meteor_Throw_2-1_818F3B66.wem</CachePath>
+				</File>
+				<File Id="496553053" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Celestial Stranding.wav</ShortName>
+					<CachePath>SFX/Celestial Stranding_FBC78EF0.wem</CachePath>
+				</File>
+				<File Id="619490783" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Player_Death.wav</ShortName>
+					<CachePath>SFX/Player_Death_818F3B66.wem</CachePath>
+				</File>
+				<File Id="624017459" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Bulwark of the Coda.wav</ShortName>
+					<CachePath>SFX/Bulwark of the Coda_FBC78EF0.wem</CachePath>
+				</File>
+				<File Id="636214354" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Meteor_Grab-1.wav</ShortName>
+					<CachePath>SFX/Meteor_Grab-1_818F3B66.wem</CachePath>
+				</File>
+				<File Id="682199324" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Meteor_Throw_4-1.wav</ShortName>
+					<CachePath>SFX/Meteor_Throw_4-1_818F3B66.wem</CachePath>
+				</File>
+				<File Id="880026024" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Meteor_Throw_1-1.wav</ShortName>
+					<CachePath>SFX/Meteor_Throw_1-1_818F3B66.wem</CachePath>
+				</File>
+				<File Id="881738276" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Button_Click_2.wav</ShortName>
+					<CachePath>SFX/Button_Click_2_818F3B66.wem</CachePath>
+				</File>
+				<File Id="890956820" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Meteor_Throw_3-1.wav</ShortName>
+					<CachePath>SFX/Meteor_Throw_3-1_818F3B66.wem</CachePath>
+				</File>
+				<File Id="891645477" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Engine_S2.wav</ShortName>
+					<CachePath>SFX/Engine_S2_FBC78EF0.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="814543256" Name="Button_Click" DurationType="OneShot" DurationMin="0.2692791" DurationMax="2.3821557">
+					<MediaRefs>
+						<MediaRef Id="360389266"/>
+						<MediaRef Id="403695054"/>
+						<MediaRef Id="881738276"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2614347193" Name="Engine_S2" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="891645477"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2614347192" Name="Engine_S3" DurationType="OneShot" DurationMin="30" DurationMax="30">
+					<MediaRefs>
+						<MediaRef Id="323987161"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2614347199" Name="Engine_S4" DurationType="OneShot" DurationMin="30" DurationMax="30">
+					<MediaRefs>
+						<MediaRef Id="263425952"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="809529563" Name="Meteor_Explode" DurationType="OneShot" DurationMin="0.7785252" DurationMax="1.2358316">
+					<MediaRefs>
+						<MediaRef Id="278788037"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1149410026" Name="Meteor_Grab" DurationType="OneShot" DurationMin="0.31533617" DurationMax="0.4724704">
+					<MediaRefs>
+						<MediaRef Id="636214354"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3809331500" Name="Meteor_Throw" DurationType="OneShot" DurationMin="0.6857404" DurationMax="0.789864">
+					<MediaRefs>
+						<MediaRef Id="414592848"/>
+						<MediaRef Id="682199324"/>
+						<MediaRef Id="880026024"/>
+						<MediaRef Id="890956820"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3991942870" Name="Music" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="496553053"/>
+						<MediaRef Id="624017459"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1386564838" Name="Player_Damaged" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3083087645" Name="Player_Death" DurationType="OneShot" DurationMin="6" DurationMax="6">
+					<MediaRefs>
+						<MediaRef Id="619490783"/>
+					</MediaRefs>
+				</Event>
+			</Events>
+		</SoundBank>
+	</SoundBanks>
+	<FileHash>{A81F27E1-2706-7C71-E7A9-90F7F58D1B73}</FileHash>
+</SoundBanksInfo>
