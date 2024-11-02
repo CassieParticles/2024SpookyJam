@@ -6,12 +6,18 @@ public class Timer : MonoBehaviour
 {
     //TODO: Add stuff for tutorial time
     private float timeLeft = 0;
+    private float timeLeftLastFrame = 0;
 
     private float timeElapsed = 0;
 
     public float getTimeLeft()
     {
         return timeLeft;
+    }
+
+    public float getTimeLeftLF()
+    {
+        return timeLeftLastFrame;
     }
 
     //Get the time since the timer started
@@ -27,6 +33,7 @@ public class Timer : MonoBehaviour
 
     private void Update()
     {
+        timeLeftLastFrame = timeLeft;
         timeLeft-=(float) Time.deltaTime;
         timeElapsed += Time.deltaTime;
     }

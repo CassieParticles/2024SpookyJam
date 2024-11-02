@@ -16,15 +16,15 @@ public class Ship : MonoBehaviour
     //When the user takes damage, what the time is set to
     [SerializeField] private float[] ProgressionIntervals = new float[3] { 2,5,10 };
 
-    [SerializeField] private float engineDamageOffsetTime = 5.0f;
+    [SerializeField] private float engineDamageOffsetTime = 3.0f;
 
     //Get the ship in various states
     [SerializeField] private Sprite[] shipStates = new Sprite[5]{ null,null,null,null,null};
-    [SerializeField] private Sprite[] engineStates = new Sprite[3] { null, null, null };
+    [SerializeField] private Sprite[] engineStates = new Sprite[4] { null, null, null,null };
     int currentEngineState = -1;
 
     private GameObject engineGO;
-    private int engineStageOffset = 0;
+    private bool engineStageOffset = false;
     private float engineStageOffsetTimer = 0;
     //Timer, used for engine sprites and to increase time remaining
     private Timer timer;
@@ -56,53 +56,34 @@ public class Ship : MonoBehaviour
                 DeathEnd();
             }
         }
-
-        for(int i=0;i<ProgressionIntervals.Length;i++)
+        else
         {
-            //Check which band it's in
-            if(timer.getTimeLeft() < ProgressionIntervals[i])
+            for (int i = 0; i < ProgressionIntervals.Length; i++)
             {
-                if(currentEngineState + engineStageOffset != i)
+                //Check which band it's in
+                if (timer.getTimeLeft() < ProgressionIntervals[i])
                 {
-                    currentEngineState = Mathf.Min(i + engineStageOffset,engineStates.Length - 1);
-                    engineGO.GetComponent<SpriteRenderer>().sprite = engineStates[currentEngineState];
-
-                    if (currentEngineState == 3)
+                    //If last frame it wasn't below the interval
+                    if (timer.getTimeLeftLF() >= ProgressionIntervals[i])
                     {
-                        //Sets the "Music" State Group's active State to "Menu"
-                        AkSoundEngine.SetState("Engine", "Stage1");
+                        SetEngineState(i);
                     }
-
-                    if (currentEngineState == 2)
-                    {
-                        //Sets the "Music" State Group's active State to "Menu"
-                        AkSoundEngine.SetState("Engine", "Stage2");
-                    }
-
-                    if (currentEngineState == 1)
-                    {
-                        //Sets the "Music" State Group's active State to "Menu"
-                        AkSoundEngine.SetState("Engine", "Stage3");
-                    }
-
-                    if (currentEngineState == 0)
-                    {
-                        //Sets the "Music" State Group's active State to "Menu"
-                        AkSoundEngine.SetState("Engine", "Stage4");
-                    }
+                    //Don't continue
+                    break;
                 }
-                //Don't continue
-                break;
             }
         }
+        
+
         //temporarily change engine sprite
-        if(engineStageOffset==1)
+        if(engineStageOffset)
         {
             engineStageOffsetTimer += Time.deltaTime;
             if(engineStageOffsetTimer > engineDamageOffsetTime)
             {
-                engineStageOffset = 0;
+                engineStageOffset = false;
                 engineStageOffsetTimer = 0;
+                SetEngineState(currentEngineState - 1);
             }
         }
     }
@@ -111,6 +92,7 @@ public class Ship : MonoBehaviour
     private void DeathBegin()
     {
         dying = true;
+        SetEngineState(engineStates.Length - 1);
     }
     //Caled on end of death anim
     private void DeathEnd() 
@@ -125,7 +107,25 @@ public class Ship : MonoBehaviour
         AkSoundEngine.SetState("Engine", "Stage1");
 
         //TEMP
+        Debug.Log("Destroy");
         Destroy(gameObject);
+    }
+
+    //Change the audio and visual of the ship
+    private void SetShipDamamgeState(int newState)
+    {
+        gameObject.GetComponent<SpriteRenderer>().sprite = shipStates[newState];
+    }
+
+    private void SetEngineState(int newState)
+    {
+        string[] audioNames = new string[4] { "Stage1", "Stage2", "Stage3", "Stage4" };
+        if(newState == currentEngineState) { return; }
+
+        currentEngineState = newState;
+
+        engineGO.GetComponent<SpriteRenderer>().sprite = engineStates[newState];
+        AkSoundEngine.SetState("Engine", audioNames[newState]);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -139,11 +139,19 @@ public class Ship : MonoBehaviour
                 return;
             }
 
-            //Add a check if meteor is active once one exists
-            //TEMP, will call meteor explode function
+
             collision.gameObject.GetComponent<MeteorPhysics>().Explode();
+
             lives--;
-            engineStageOffset = 1;
+
+            //Temporarily make engine state one less
+            if(!engineStageOffset)
+            { 
+                SetEngineState(currentEngineState + 1);
+            }
+            engineStageOffset = true;
+            engineStageOffsetTimer = 0;
+
 
             //Plays the Player_Damaged event
             AkSoundEngine.PostEvent("Player_Damaged", this.gameObject);
@@ -159,7 +167,7 @@ public class Ship : MonoBehaviour
                 }
             }
 
-            gameObject.GetComponent<SpriteRenderer>().sprite = shipStates[lives];
+            SetShipDamamgeState(lives);
             if(lives==0)
             {
                 DeathBegin();
