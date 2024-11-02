@@ -6,15 +6,19 @@ using UnityEngine;
 
 public class MeteorSpawning : MonoBehaviour
 {
-    [SerializeField] private float spawnDistance = 10;   //Figure out the spawn distance
     [SerializeField] private float randomOffsetRange = 10;
     [SerializeField] private float meteorInitialSpeed = 3;
+    
+    //Meteors per second
+    [SerializeField] private float initialSpawnRate = 0.5f;
+    [SerializeField] private float spawnRateIncrease = 0.1f;
+    [SerializeField] private float maxSpawnRate = 10;
 
-
-    [SerializeField][Range(0.1f, 20)] private float spawnFreq;
-    private float spawnTime;
     [SerializeField] private GameObject meteor;
-    private float spawnAngle, spawnPos;
+    private float spawnTime;
+    private float spawnDistance;
+
+    private Timer timer;
 
     void SpawnMeteor()
     {
@@ -47,6 +51,9 @@ public class MeteorSpawning : MonoBehaviour
 
         float aspect = (float)Screen.width / Screen.height;
         spawnDistance = new Vector2(Camera.main.orthographicSize  * aspect, Camera.main.orthographicSize).magnitude; //This can be moved to update for dynamic changes in resolution but wasnt sure if it was worth it for doing this calculation every frame
+
+        timer = GameObject.Find("Timer").GetComponent<Timer>();
+
     }
 
     // Update is called once per frame
@@ -54,6 +61,9 @@ public class MeteorSpawning : MonoBehaviour
     {
         //TODO: When timer is added, adjust meteor spawn rate
         spawnTime += Time.deltaTime;
+
+        float spawnRate = initialSpawnRate + spawnRateIncrease * timer.getTimeElapsed();
+        float spawnFreq = 1.0f / spawnRate;
 
         if(spawnTime > spawnFreq)
         {
