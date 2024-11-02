@@ -73,7 +73,7 @@ public class Ship : MonoBehaviour
             Destroy(collision.gameObject);
             lives--;
 
-            for(int i = 0; i < shipStates.Length; ++i)
+            for(int i = 0; i < ProgressionIntervals.Length; ++i)
             {
                 if (ProgressionIntervals[i] > timer.getTimeLeft())
                 {
