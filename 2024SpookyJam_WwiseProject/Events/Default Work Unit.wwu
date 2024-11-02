@@ -1,6 +1,99 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{92FB35E2-CE24-4E88-9C2C-9B628B71FE01}" SchemaVersion="119">
 	<Events>
-		<WorkUnit Name="Default Work Unit" ID="{92FB35E2-CE24-4E88-9C2C-9B628B71FE01}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{92FB35E2-CE24-4E88-9C2C-9B628B71FE01}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Button_Click" ID="{CFB7B1F3-642C-425D-918E-43CA41403B7C}">
+					<ChildrenList>
+						<Action Name="" ID="{1CA905F0-521D-419A-B637-2869676FA7E3}" ShortID="1019870796">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Button_Clicks" ID="{025F24E5-509E-4C51-BE8B-42BCA18B0339}" WorkUnitID="{82C3EF6F-9CAE-4937-AE26-4630575489C6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Meteor_Explode" ID="{E791F57F-16DD-45C7-BE8E-DDD7711C60CE}">
+					<ChildrenList>
+						<Action Name="" ID="{597500EF-E6ED-417F-AD24-3F57A055874B}" ShortID="347601221">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Meteor_Explode" ID="{1C532274-9B06-4049-A4A8-AF2FF61902A9}" WorkUnitID="{82C3EF6F-9CAE-4937-AE26-4630575489C6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Player_Death" ID="{38B9C244-CA71-4EE9-BF71-1FE2A57E0008}">
+					<ChildrenList>
+						<Action Name="" ID="{0FB147E5-8760-4CFB-8F45-D5AF10947407}" ShortID="686390806">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Player_Death" ID="{C0ABD937-1DE6-494E-9DF3-1F2470405454}" WorkUnitID="{82C3EF6F-9CAE-4937-AE26-4630575489C6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Meteor_Grab" ID="{28CC3DBC-A581-4C68-B287-7984B1162291}">
+					<ChildrenList>
+						<Action Name="" ID="{45CB359E-2774-4E9F-B973-18475AB83D0C}" ShortID="554808621">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Meteor_Grab" ID="{3B72E382-75F1-4557-BC8E-B14E04D9A8E1}" WorkUnitID="{82C3EF6F-9CAE-4937-AE26-4630575489C6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Player_Damaged" ID="{269A2639-5132-4F1D-8DF1-56F401953836}"/>
+				<Event Name="Meteor_Throw" ID="{52E115B4-3970-45E1-9283-DCDBAC7C3E27}">
+					<ChildrenList>
+						<Action Name="" ID="{E103D976-FF28-4311-910E-1A48693FA372}" ShortID="54178686">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Meteor_Throws" ID="{74815D2D-A52D-4CCA-91AE-1AA1786A2CDD}" WorkUnitID="{82C3EF6F-9CAE-4937-AE26-4630575489C6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Temp_Music" ID="{BF9B0F91-F04E-4C51-9FBB-E46B8DF2630D}"/>
+				<Event Name="Engine_S2" ID="{77D2B659-C1E2-47CE-AF91-D0B413F5D993}">
+					<ChildrenList>
+						<Action Name="" ID="{0676A621-1960-4978-A7E5-07A14E598E49}" ShortID="621269282">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Engine_S2" ID="{ED82A025-C83A-4F9A-9E84-CCC64E783A12}" WorkUnitID="{82C3EF6F-9CAE-4937-AE26-4630575489C6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Engine_S3" ID="{B2CDD2DA-B74B-4EE6-ACCA-A4DF27AFFCB7}">
+					<ChildrenList>
+						<Action Name="" ID="{89103F48-BFDE-4FF3-9F69-EA39024B1A15}" ShortID="1040629416">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Engine_S3" ID="{1399BF04-37BB-4E94-B47E-3E319235AC3B}" WorkUnitID="{82C3EF6F-9CAE-4937-AE26-4630575489C6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Engine_S4" ID="{9187DA90-E151-4D10-B09F-6E09D0E42498}">
+					<ChildrenList>
+						<Action Name="" ID="{3F8A9ADE-74D3-426C-BA28-B163DBA80E21}" ShortID="877817096">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Engine_S4" ID="{6381C809-D00D-4B58-9A02-C10F93C8DC78}" WorkUnitID="{82C3EF6F-9CAE-4937-AE26-4630575489C6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
 	</Events>
 </WwiseDocument>

@@ -1,6 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{0701A46B-61FF-4ACA-9A83-E54D6302BBC6}" SchemaVersion="119">
 	<SoundBanks>
-		<WorkUnit Name="Default Work Unit" ID="{0701A46B-61FF-4ACA-9A83-E54D6302BBC6}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{0701A46B-61FF-4ACA-9A83-E54D6302BBC6}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundBank Name="Main" ID="{5B3FC8A7-74DD-4396-A045-DAF4DCBAFB2C}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Button_Click" ID="{CFB7B1F3-642C-425D-918E-43CA41403B7C}" WorkUnitID="{92FB35E2-CE24-4E88-9C2C-9B628B71FE01}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Meteor_Explode" ID="{E791F57F-16DD-45C7-BE8E-DDD7711C60CE}" WorkUnitID="{92FB35E2-CE24-4E88-9C2C-9B628B71FE01}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Meteor_Throw" ID="{52E115B4-3970-45E1-9283-DCDBAC7C3E27}" WorkUnitID="{92FB35E2-CE24-4E88-9C2C-9B628B71FE01}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Engine_S2" ID="{77D2B659-C1E2-47CE-AF91-D0B413F5D993}" WorkUnitID="{92FB35E2-CE24-4E88-9C2C-9B628B71FE01}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Temp_Music" ID="{BF9B0F91-F04E-4C51-9FBB-E46B8DF2630D}" WorkUnitID="{92FB35E2-CE24-4E88-9C2C-9B628B71FE01}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Meteor_Grab" ID="{28CC3DBC-A581-4C68-B287-7984B1162291}" WorkUnitID="{92FB35E2-CE24-4E88-9C2C-9B628B71FE01}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Engine_S4" ID="{9187DA90-E151-4D10-B09F-6E09D0E42498}" WorkUnitID="{92FB35E2-CE24-4E88-9C2C-9B628B71FE01}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Engine_S3" ID="{B2CDD2DA-B74B-4EE6-ACCA-A4DF27AFFCB7}" WorkUnitID="{92FB35E2-CE24-4E88-9C2C-9B628B71FE01}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Player_Death" ID="{38B9C244-CA71-4EE9-BF71-1FE2A57E0008}" WorkUnitID="{92FB35E2-CE24-4E88-9C2C-9B628B71FE01}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Player_Damaged" ID="{269A2639-5132-4F1D-8DF1-56F401953836}" WorkUnitID="{92FB35E2-CE24-4E88-9C2C-9B628B71FE01}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+			</ChildrenList>
+		</WorkUnit>
 	</SoundBanks>
 </WwiseDocument>
