@@ -59,7 +59,24 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Temp_Music" ID="{BF9B0F91-F04E-4C51-9FBB-E46B8DF2630D}"/>
+				<Event Name="Music" ID="{BF9B0F91-F04E-4C51-9FBB-E46B8DF2630D}">
+					<ChildrenList>
+						<Action Name="" ID="{C0FF8AFD-9802-4D22-82DC-9878A2B729CB}" ShortID="315806511">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Celestial Stranding" ID="{5E27E157-79D0-4610-A57E-A52914CCD3CB}" WorkUnitID="{82C3EF6F-9CAE-4937-AE26-4630575489C6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{73162877-A770-405E-97BE-0B14E01B7AB9}" ShortID="759350852">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Bulwark of the Coda" ID="{E0DEDEB1-48D0-43A2-B786-6BB2EA4979AE}" WorkUnitID="{82C3EF6F-9CAE-4937-AE26-4630575489C6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 				<Event Name="Engine_S2" ID="{77D2B659-C1E2-47CE-AF91-D0B413F5D993}">
 					<ChildrenList>
 						<Action Name="" ID="{0676A621-1960-4978-A7E5-07A14E598E49}" ShortID="621269282">

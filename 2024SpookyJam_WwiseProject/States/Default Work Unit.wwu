@@ -1,6 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{18A01B34-26FB-426E-AC59-3E1B7B4387FF}" SchemaVersion="119">
 	<States>
-		<WorkUnit Name="Default Work Unit" ID="{18A01B34-26FB-426E-AC59-3E1B7B4387FF}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{18A01B34-26FB-426E-AC59-3E1B7B4387FF}" PersistMode="Standalone">
+			<ChildrenList>
+				<StateGroup Name="Music" ID="{1E8BC592-B75E-483F-9F53-97EF8CB0B7C7}">
+					<PropertyList>
+						<Property Name="DefaultTransitionTime" Type="Real64" Value="0.5"/>
+					</PropertyList>
+					<ChildrenList>
+						<State Name="None" ID="{6ED550F7-455D-4D06-A1DB-929A39B8AA66}"/>
+						<State Name="Menu" ID="{E890CC0D-300C-450B-B8E3-E7A556E34E33}"/>
+						<State Name="Gameplay" ID="{197DD05A-24D8-4B4F-ABE1-B68EA1BB5F01}"/>
+					</ChildrenList>
+					<TransitionList>
+						<Transition>
+							<StartState Name="None" ID="{6ED550F7-455D-4D06-A1DB-929A39B8AA66}"/>
+							<EndState Name="Menu" ID="{E890CC0D-300C-450B-B8E3-E7A556E34E33}"/>
+							<Time>0</Time>
+							<IsShared>false</IsShared>
+						</Transition>
+					</TransitionList>
+				</StateGroup>
+			</ChildrenList>
+		</WorkUnit>
 	</States>
 </WwiseDocument>

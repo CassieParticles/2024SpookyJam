@@ -532,6 +532,98 @@
 						</Sound>
 					</ChildrenList>
 				</RandomSequenceContainer>
+				<Sound Name="Celestial Stranding" ID="{5E27E157-79D0-4610-A57E-A52914CCD3CB}" ShortID="965673179">
+					<PropertyList>
+						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E4C6EF28-5D9A-4A19-9E20-7978E4D32367}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C8085D01-3B71-45EC-954B-CDA2B1A4523E}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Celestial Stranding" ID="{3AFEB075-468B-42C9-B1F2-6AA005FE8067}">
+							<Language>SFX</Language>
+							<AudioFile>Celestial Stranding.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="496553053"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<StateInfo>
+						<StateGroupList>
+							<StateGroupInfo>
+								<StateGroupRef Name="Music" ID="{1E8BC592-B75E-483F-9F53-97EF8CB0B7C7}"/>
+							</StateGroupInfo>
+						</StateGroupList>
+						<CustomStateList>
+							<CustomState>
+								<StateRef Name="Menu" ID="{E890CC0D-300C-450B-B8E3-E7A556E34E33}"/>
+								<CustomState Name="" ID="{FC1FBA9A-13F2-4FE7-B27B-E0C7A4041712}" ShortID="919238962"/>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="Gameplay" ID="{197DD05A-24D8-4B4F-ABE1-B68EA1BB5F01}"/>
+								<CustomState Name="" ID="{A246EE3A-0236-4D2B-A2CE-C5379D817463}" ShortID="116870185">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64" Value="-108"/>
+									</PropertyList>
+								</CustomState>
+							</CustomState>
+						</CustomStateList>
+					</StateInfo>
+					<ActiveSourceList>
+						<ActiveSource Name="Celestial Stranding" ID="{3AFEB075-468B-42C9-B1F2-6AA005FE8067}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Bulwark of the Coda" ID="{E0DEDEB1-48D0-43A2-B786-6BB2EA4979AE}" ShortID="627324002">
+					<PropertyList>
+						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E4C6EF28-5D9A-4A19-9E20-7978E4D32367}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C8085D01-3B71-45EC-954B-CDA2B1A4523E}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Bulwark of the Coda" ID="{84A1CA15-5D8E-4F5F-B4AC-F0705752CC25}">
+							<Language>SFX</Language>
+							<AudioFile>Bulwark of the Coda.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="624017459"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<StateInfo>
+						<StateGroupList>
+							<StateGroupInfo>
+								<StateGroupRef Name="Music" ID="{1E8BC592-B75E-483F-9F53-97EF8CB0B7C7}"/>
+							</StateGroupInfo>
+						</StateGroupList>
+						<CustomStateList>
+							<CustomState>
+								<StateRef Name="Menu" ID="{E890CC0D-300C-450B-B8E3-E7A556E34E33}"/>
+								<CustomState Name="" ID="{1DE06B4D-0EA7-481F-8EB8-4FB1E3596D1A}" ShortID="813585706">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64" Value="-108"/>
+									</PropertyList>
+								</CustomState>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="Gameplay" ID="{197DD05A-24D8-4B4F-ABE1-B68EA1BB5F01}"/>
+								<CustomState Name="" ID="{7448767E-7B8B-48B2-ABE4-E169ADF9C710}" ShortID="35826729"/>
+							</CustomState>
+						</CustomStateList>
+					</StateInfo>
+					<ActiveSourceList>
+						<ActiveSource Name="Bulwark of the Coda" ID="{84A1CA15-5D8E-4F5F-B4AC-F0705752CC25}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

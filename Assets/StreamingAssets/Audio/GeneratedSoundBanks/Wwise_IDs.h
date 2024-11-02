@@ -20,10 +20,26 @@ namespace AK
         static const AkUniqueID METEOR_EXPLODE = 809529563U;
         static const AkUniqueID METEOR_GRAB = 1149410026U;
         static const AkUniqueID METEOR_THROW = 3809331500U;
+        static const AkUniqueID MUSIC = 3991942870U;
         static const AkUniqueID PLAYER_DAMAGED = 1386564838U;
         static const AkUniqueID PLAYER_DEATH = 3083087645U;
-        static const AkUniqueID TEMP_MUSIC = 1192912587U;
     } // namespace EVENTS
+
+    namespace STATES
+    {
+        namespace MUSIC
+        {
+            static const AkUniqueID GROUP = 3991942870U;
+
+            namespace STATE
+            {
+                static const AkUniqueID GAMEPLAY = 89505537U;
+                static const AkUniqueID MENU = 2607556080U;
+                static const AkUniqueID NONE = 748895195U;
+            } // namespace STATE
+        } // namespace MUSIC
+
+    } // namespace STATES
 
     namespace BANKS
     {
