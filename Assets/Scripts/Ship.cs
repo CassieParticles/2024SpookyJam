@@ -13,6 +13,10 @@ public class Ship : MonoBehaviour
     private float deathTimer = 0;
     bool dying = false;
 
+    //When the user takes damage, what the time is set to
+    [SerializeField] private float[] ProgressionIntervals = new float[3] { 2,5,10 };
+
+
     //Get the ship in various states
     [SerializeField] private Sprite[] shipStates = new Sprite[5]{ null,null,null,null,null};
 
@@ -22,6 +26,10 @@ public class Ship : MonoBehaviour
     private void Start()
     {
         timer = GameObject.Find("Timer").GetComponent<Timer>();
+
+        //Set the timer to max time
+        //TODO: Add beginning time for tutorial
+        timer.setTimeRemaining(ProgressionIntervals[ProgressionIntervals.Length-1]);   
     }
 
     private void Update()
@@ -61,14 +69,24 @@ public class Ship : MonoBehaviour
                 return;
             }
             //Add a check if meteor is active once one exists
+            //TEMP, will call meteor explode function
+            Destroy(collision.gameObject);
             lives--;
+
+            for(int i = 0; i < shipStates.Length; ++i)
+            {
+                if (ProgressionIntervals[i] > timer.getTimeLeft())
+                {
+                    timer.setTimeRemaining(ProgressionIntervals[i]);
+                }
+            }
+
             gameObject.GetComponent<SpriteRenderer>().sprite = shipStates[lives];
             if(lives==0)
             {
                 DeathBegin();
             }
-            //TEMP, will call meteor explode function
-            Destroy(collision.gameObject);
+
         }
     }
 }
