@@ -9,15 +9,25 @@ public class CursorMovement : MonoBehaviour
     private LinkedList<GameObject> objectsIntersecting;
     private GameObject objectSelected;
 
+    private PauseMenu pauseMenu;
+
     void Start()
     {
         cameraObj = GameObject.Find("Main Camera").GetComponent<Camera>(); 
         objectsIntersecting = new LinkedList<GameObject>();
+
+        pauseMenu = GameObject.Find("PauseScreen").GetComponent<PauseMenu>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        //Exit early if game is paused
+        if(pauseMenu.getPaused())
+        {
+            return;
+        }
+
         Vector3 mousePos = Input.mousePosition;
 
         Vector3 cursorPos = cameraObj.ScreenToWorldPoint(mousePos);
@@ -27,8 +37,9 @@ public class CursorMovement : MonoBehaviour
         //Bad practice, will udpate if we have time
         if(Input.GetMouseButtonDown(0))
         {
-            if(objectSelected = objectsIntersecting.First.Value) 
+            if(objectsIntersecting.First!=null)
             {
+                objectSelected = objectsIntersecting.First.Value;
                 objectSelected.GetComponent<MeteorPhysics>().Select(this.gameObject);
             }
         }
@@ -53,7 +64,7 @@ public class CursorMovement : MonoBehaviour
                 //Check if meteor comp is already in list (won't be but good to check)
                 if(g.GetComponent<MeteorPhysics>()==meteorComp)
                 {
-                    Debug.Log("Something went wrong");
+                    //Debug.Log("Something went wrong");
                     return; //If more needs to happen after this, change return with something else to prevent adding
                 }
             }
