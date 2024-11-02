@@ -146,9 +146,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathAnimTime: 0.5
   ProgressionIntervals:
-  - 2
   - 5
   - 10
+  - 15
+  - 30
+  engineDamageOffsetTime: 5
   shipStates:
   - {fileID: 21300000, guid: da3c2f8052be50a48bcd210ebdf1803d, type: 3}
   - {fileID: 21300000, guid: bdd9796cc0033094d9b444e67cc63113, type: 3}
@@ -159,6 +161,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 05a642c3d837c804bb9c8ac6cb861ef6, type: 3}
   - {fileID: 21300000, guid: 5f9ad3006ffdcef42ac166afe2dbe896, type: 3}
   - {fileID: 21300000, guid: aec93845683dddd4d856fb4b6a76b7d6, type: 3}
+  - {fileID: 21300000, guid: 9c3207d42065933478aff9f04ffa7cdf, type: 3}
   CrewSpawnerObj: {fileID: 1187661903836089683, guid: 595f0223d704e1a49b8ef1b37810d352, type: 3}
 --- !u!1 &2986450181448118480
 GameObject:
