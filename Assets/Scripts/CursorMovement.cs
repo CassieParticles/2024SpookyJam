@@ -27,8 +27,9 @@ public class CursorMovement : MonoBehaviour
         //Bad practice, will udpate if we have time
         if(Input.GetMouseButtonDown(0))
         {
-            if(objectSelected = objectsIntersecting.First.Value) 
+            if(objectsIntersecting.First!=null)
             {
+                objectSelected = objectsIntersecting.First.Value;
                 objectSelected.GetComponent<MeteorPhysics>().Select(this.gameObject);
             }
         }
