@@ -6,24 +6,31 @@ public class CrewSpawner : MonoBehaviour
 {
 
     [SerializeField] private GameObject crew;
-    [SerializeField] private int MaxCrew;
-    private int crewNumber;
+    [SerializeField] private int maxCrew;
+    private float timer;
 
     // Update is called once per frame
     void Update()
     {
-        SpawnCrew();
+        timer = timer - Time.deltaTime;
+        if (timer < 0)
+        {
+            SpawnCrew();
+            
+        }
     }
 
-    void SpawnCrew()
+    public void SpawnCrew()
     {
-        crewNumber = MaxCrew;
-        if (crewNumber > 0)
-            {
-            GameObject newCrew = Instantiate(crew);
-        }
-       
 
+        for (int i = 0; i < maxCrew; i++)
+        {
+            GameObject newCrew = Instantiate(crew);
+           
+        }
+        
+            timer = 5.0f;
+       
     }
 
 
