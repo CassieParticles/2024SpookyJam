@@ -10,7 +10,7 @@ public class MeteorPhysics : MonoBehaviour
     private bool isSelected;
     private GameObject cursor;
     private Rigidbody2D rb;
-    private Rigidbody2D cursorRB;
+    private float despawnRange = 15;
 
     // Start is called before the first frame update
     void Start()
@@ -22,7 +22,11 @@ public class MeteorPhysics : MonoBehaviour
     void Update()
     {
         if (isSelected) {
-            rb.velocity += new Vector2(cursorRB.position.x - rb.position.x, cursorRB.position.y - rb.position.y) / 2;
+            rb.velocity += new Vector2(cursor.transform.position.x - rb.position.x, cursor.transform.position.y - rb.position.y) / 2;
+        } else {
+            if (rb.position.magnitude > despawnRange) {
+                Destroy(gameObject);
+            }
         }
     }
 
@@ -33,14 +37,14 @@ public class MeteorPhysics : MonoBehaviour
     public void Select(GameObject selectingCursor) {
         isSelected = true;
         cursor = selectingCursor;
-        cursorRB = cursor.GetComponent<Rigidbody2D>();
     }
 
     public void DeSelect() {
         isSelected = false;
     }
 
-    public void setDespawnRange(float spawnRange) {
-        //Here you go Cassie    
+    public void SetDespawnRange(float spawnRange) {
+        //Here you go Cassie
+        despawnRange = spawnRange + 1;
     }
 }
