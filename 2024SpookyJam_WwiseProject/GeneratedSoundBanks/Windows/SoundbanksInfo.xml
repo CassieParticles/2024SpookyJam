@@ -41,7 +41,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{3811234E-AF0E-D341-574B-165D218C9056}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{8F247817-FD94-A416-A3EA-39A4B7ECE23E}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -200,5 +200,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{E467D7FD-7E69-1180-337E-F6F210143AED}</FileHash>
+	<FileHash>{ABCBF318-AA83-C8FE-1A13-EAD757793033}</FileHash>
 </SoundBanksInfo>

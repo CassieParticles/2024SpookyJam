@@ -105,7 +105,7 @@ MonoBehaviour:
   speedLimit: 50
   accelerationDivider: 8.02
   ExperimentalFling: 0
-  flingSoundThreshold: 10
+  flingSoundThreshold: 5.5
   sprites:
   - {fileID: 21300000, guid: 97badfaf7c2b48b4d8dff5c8fb269320, type: 3}
   - {fileID: 21300000, guid: 90fe02e8229fa5144b69e64b9f9a62ba, type: 3}
