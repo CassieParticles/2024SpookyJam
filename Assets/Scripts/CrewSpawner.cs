@@ -20,7 +20,7 @@ public class CrewSpawner : MonoBehaviour
 
         for (int i = 0; i < maxCrew; i++)
         {
-            GameObject newCrew = Instantiate(crew);
+            GameObject newCrew = Instantiate(crew, transform.position, Quaternion.Euler(0, 0, Random.Range(0, 360)));
            
         }
         
