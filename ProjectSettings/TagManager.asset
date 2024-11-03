@@ -41,3 +41,21 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Background
+    uniqueID: 3635644063
+    locked: 0
+  - name: Ship
+    uniqueID: 1832558565
+    locked: 0
+  - name: Meteors
+    uniqueID: 2056781807
+    locked: 0
+  - name: Spaceship
+    uniqueID: 282952663
+    locked: 0
+  - name: Crew
+    uniqueID: 2093254085
+    locked: 0
+  - name: Cursor
+    uniqueID: 3161720325
+    locked: 0
