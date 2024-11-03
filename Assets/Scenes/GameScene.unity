@@ -381,12 +381,20 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7477126237375553403, guid: 1ce8cbd5c5d5d1041af0b0ccd5d42609, type: 3}
+      propertyPath: maxSpawnRate
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7477126237375553403, guid: 1ce8cbd5c5d5d1041af0b0ccd5d42609, type: 3}
       propertyPath: initialSpawnRate
       value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 7477126237375553403, guid: 1ce8cbd5c5d5d1041af0b0ccd5d42609, type: 3}
+      propertyPath: randomOffsetRange
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 7477126237375553403, guid: 1ce8cbd5c5d5d1041af0b0ccd5d42609, type: 3}
       propertyPath: spawnRateIncrease
-      value: 0.02
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 8784417597585611973, guid: 1ce8cbd5c5d5d1041af0b0ccd5d42609, type: 3}
       propertyPath: m_Name
