@@ -102,8 +102,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   grabDrag: 0.0107
-  speedLimit: 50
-  accelerationDivider: 8.02
+  speedLimit: 40
+  accelerationDivider: 1.5
   ExperimentalFling: 0
   flingSoundThreshold: 5.5
   sprites:

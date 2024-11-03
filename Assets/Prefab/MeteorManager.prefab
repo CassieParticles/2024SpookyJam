@@ -45,8 +45,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   randomOffsetRange: 20
-  meteorInitialSpeed: 5
+  meteorInitialSpeed: 3
   initialSpawnRate: 0.1
   spawnRateIncrease: 0.02
-  maxSpawnRate: 10
+  maxSpawnRate: 8
   meteor: {fileID: 555478232569384986, guid: 4ceed897610559f4b9fd1d7e2c9300f4, type: 3}

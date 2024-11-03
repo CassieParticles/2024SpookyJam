@@ -40,5 +40,10 @@ public class WinMenu : MonoBehaviour
 
     public void Quit() {
         SceneManager.LoadScene("MainMenuScene");
+
+        //Sets the "Music" State Group's active State to "Menu"
+        AkSoundEngine.SetState("Music", "Menu");
+        //Sets the "Engine" State Group's active State to "Stage1"
+        AkSoundEngine.SetState("Engine", "Stage1");
     }
 }
