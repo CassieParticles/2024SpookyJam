@@ -152,16 +152,16 @@ MonoBehaviour:
   - 30
   engineDamageOffsetTime: 5
   shipStates:
-  - {fileID: 21300000, guid: da3c2f8052be50a48bcd210ebdf1803d, type: 3}
-  - {fileID: 21300000, guid: bdd9796cc0033094d9b444e67cc63113, type: 3}
-  - {fileID: 21300000, guid: 388966ab7c7257c4f8f2144cbf484ae8, type: 3}
-  - {fileID: 21300000, guid: 4d8caa260fb332c4c82037fc39ba20cd, type: 3}
-  - {fileID: 21300000, guid: a4ba402f0ae6e0b4c8f1f63134a308b9, type: 3}
+  - {fileID: 21300000, guid: de9cf8be10205e240841e9196a7f7708, type: 3}
+  - {fileID: 21300000, guid: de9cf8be10205e240841e9196a7f7708, type: 3}
+  - {fileID: 21300000, guid: 733c1f4540668894fa208991fbd73787, type: 3}
+  - {fileID: 21300000, guid: 664987c445678f5428700be40be071b7, type: 3}
+  - {fileID: 21300000, guid: 7045ba4513beacd469663037d7e80ea2, type: 3}
   engineStates:
-  - {fileID: 21300000, guid: 05a642c3d837c804bb9c8ac6cb861ef6, type: 3}
-  - {fileID: 21300000, guid: 5f9ad3006ffdcef42ac166afe2dbe896, type: 3}
-  - {fileID: 21300000, guid: aec93845683dddd4d856fb4b6a76b7d6, type: 3}
-  - {fileID: 21300000, guid: 9c3207d42065933478aff9f04ffa7cdf, type: 3}
+  - {fileID: 21300000, guid: dd38c69f0b7cbc64b8029699b17a88d3, type: 3}
+  - {fileID: 21300000, guid: a64541d3736e79842b658e3532f4cec1, type: 3}
+  - {fileID: 21300000, guid: 419b9778e7853c6459da997a1ab2ef6c, type: 3}
+  - {fileID: 0}
   CrewSpawnerObj: {fileID: 1187661903836089683, guid: 595f0223d704e1a49b8ef1b37810d352, type: 3}
 --- !u!1 &2986450181448118480
 GameObject:
@@ -189,7 +189,7 @@ Transform:
   m_GameObject: {fileID: 2986450181448118480}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.015, y: -0.11750091, z: 0.078116655}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -236,12 +236,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 05a642c3d837c804bb9c8ac6cb861ef6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 419b9778e7853c6459da997a1ab2ef6c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 1.28, y: 1.28}
+  m_DrawMode: 1
+  m_Size: {x: 2.56, y: 2.112}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1

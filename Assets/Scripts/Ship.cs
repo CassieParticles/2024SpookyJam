@@ -15,7 +15,7 @@ public class Ship : MonoBehaviour
     bool dying = false;
 
     //When the user takes damage, what the time is set to
-    [SerializeField] private float[] ProgressionIntervals = new float[3] { 2,5,10 };
+    [SerializeField] private float[] ProgressionIntervals = new float[3] { 5,10,15 };
 
     [SerializeField] private float engineDamageOffsetTime = 3.0f;
 
@@ -65,11 +65,12 @@ public class Ship : MonoBehaviour
             for (int i = 0; i < ProgressionIntervals.Length; i++)
             {
                 //Check which band it's in
-                if (timer.getTimeLeft() < ProgressionIntervals[i])
+                if (timer.getTimeLeft() < ProgressionIntervals[i] && !engineStageOffset)
                 {
                     //If last frame it wasn't below the interval
                     if (timer.getTimeLeftLF() >= ProgressionIntervals[i])
                     {
+                        Debug.Log("Progressed to " + i);
                         SetEngineState(i);
                     }
                     //Don't continue
@@ -87,6 +88,7 @@ public class Ship : MonoBehaviour
             {
                 engineStageOffset = false;
                 engineStageOffsetTimer = 0;
+                Debug.Log("Returned to " + (currentEngineState - 1));
                 SetEngineState(currentEngineState - 1);
             }
         }
@@ -155,8 +157,9 @@ public class Ship : MonoBehaviour
             lives--;
 
             //Temporarily make engine state one less
-            if(!engineStageOffset)
-            { 
+            if(!engineStageOffset && currentEngineState < 3)
+            {
+                Debug.Log("Temporary downgrade to " + (currentEngineState + 1));
                 SetEngineState(currentEngineState + 1);
             }
             engineStageOffset = true;

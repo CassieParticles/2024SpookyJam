@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4145551381639161461}
   - component: {fileID: -4077998558797514126}
   - component: {fileID: 1658691026530270645}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Meteor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -218,7 +218,7 @@ GameObject:
   - component: {fileID: 660083016264490850}
   - component: {fileID: 3649747161327760731}
   - component: {fileID: 3760519383421312583}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Explosion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -281,7 +281,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+  m_Sprite: {fileID: -1493714173, guid: c4c45e617ec2d514398751795371db2b, type: 3}
   m_Color: {r: 0.9339623, g: 0.4114392, b: 0.21586865, a: 1}
   m_FlipX: 0
   m_FlipY: 0
