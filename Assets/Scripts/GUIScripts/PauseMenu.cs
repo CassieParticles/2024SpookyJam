@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -29,7 +30,7 @@ public class PauseMenu : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape) && !GameObject.Find("WinScreen").transform.GetChild(0).gameObject.activeSelf && !GameObject.Find("LoseScreen").transform.GetChild(0).gameObject.activeSelf)
+        if(Input.GetKeyDown(KeyCode.Escape)/* && !GameObject.Find("WinScreen").transform.GetChild(0).gameObject.activeSelf && !GameObject.Find("LoseScreen").transform.GetChild(0).gameObject.activeSelf*/)
         {
             paused = !paused;
             canvas.SetActive(paused);
@@ -55,10 +56,10 @@ public class PauseMenu : MonoBehaviour
 
     public void QuitToMenu()
     {
-        //TODO: Quit
+        AkSoundEngine.PostEvent("Button_Click", this.gameObject);
+        SceneManager.LoadScene("MainMenuScene");
 
         //Plays the Button_Click event
-        AkSoundEngine.PostEvent("Button_Click", this.gameObject);
     }
 
     public void MusicStates(bool state)
