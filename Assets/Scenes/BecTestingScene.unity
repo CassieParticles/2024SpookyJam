@@ -136,7 +136,6 @@ GameObject:
   - component: {fileID: 3621170}
   - component: {fileID: 3621169}
   - component: {fileID: 3621171}
-  - component: {fileID: 3621172}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -154,7 +153,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.05660379, g: 0.054574594, b: 0.054574594, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -267,35 +266,6 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: d835a22c5e7f5c14f9a83f31f105553e, type: 2}
-  useCallbacks: 0
-  Callbacks: []
-  playingId: 0
-  soundEmitterObject: {fileID: 0}
-  transitionDuration: 0
-  eventIdInternal: 0
-  valueGuidInternal: 
-  m_callbackDataInternal: {fileID: 0}
---- !u!114 &3621172
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3621165}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 082912ecf50c504468d35538ac2b77e9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  triggerList: f7e1664c
-  useOtherObject: 0
-  actionOnEventType: 0
-  curveInterpolation: 4
-  enableActionOnEvent: 0
-  data:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 283e2c2e452ee804ea190a4a8d7bbd51, type: 2}
   useCallbacks: 0
   Callbacks: []
   playingId: 0
@@ -744,6 +714,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7477126237375553403, guid: 1ce8cbd5c5d5d1041af0b0ccd5d42609, type: 3}
+      propertyPath: spawnRateIncrease
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8784417597585611973, guid: 1ce8cbd5c5d5d1041af0b0ccd5d42609, type: 3}
       propertyPath: m_Name
       value: MeteorManager
@@ -762,6 +736,6 @@ SceneRoots:
   - {fileID: 1223894923}
   - {fileID: 1005968015}
   - {fileID: 92304989}
+  - {fileID: 301855204}
   - {fileID: 1676134793}
   - {fileID: 1124706840}
-  - {fileID: 301855204}

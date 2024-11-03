@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
 
 public class Ship : MonoBehaviour
@@ -44,6 +45,9 @@ public class Ship : MonoBehaviour
         crewSpawner = CrewSpawnerObj.GetComponent<CrewSpawner>();
 
         engineGO = gameObject.transform.GetChild(0).gameObject;
+
+        //Plays the Button_Click event
+        AkSoundEngine.PostEvent("States_Engine", this.gameObject);
     }
 
     private void Update()
@@ -101,9 +105,9 @@ public class Ship : MonoBehaviour
 
         //Plays the Player_Damaged event
         AkSoundEngine.PostEvent("Player_Death", this.gameObject);
-        //Sets the "Music" State Group's active State to "Menu"
+        //Sets the "Music" State Group's active State to "Death"
         AkSoundEngine.SetState("Music", "Death");
-        //Sets the "Music" State Group's active State to "Menu"
+        //Sets the "Engine" State Group's active State to "Stage1"
         AkSoundEngine.SetState("Engine", "Stage1");
 
         //TEMP
@@ -119,13 +123,19 @@ public class Ship : MonoBehaviour
 
     private void SetEngineState(int newState)
     {
-        string[] audioNames = new string[4] { "Stage1", "Stage2", "Stage3", "Stage4" };
+        string[] audioNames = new string[4] { "Stage4", "Stage3", "Stage2", "Stage1" };
         if(newState == currentEngineState) { return; }
 
         currentEngineState = newState;
 
         engineGO.GetComponent<SpriteRenderer>().sprite = engineStates[newState];
         AkSoundEngine.SetState("Engine", audioNames[newState]);
+    }
+
+    public string GetEngineState()
+    {
+        string[] audioNames = new string[4] { "Stage4", "Stage3", "Stage2", "Stage1" };
+        return audioNames[currentEngineState];
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
