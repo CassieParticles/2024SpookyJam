@@ -16,8 +16,9 @@ public class MainMenu : MonoBehaviour
             AkSoundEngine.PostEvent("States_Music", this.gameObject);
             //Sets the "Music" State Group's active State to "Menu"
             AkSoundEngine.SetState("Music", "Menu");
-        } else {
             musicManager.SetPlaying(true);
+        } else {
+            
         }
     }
 

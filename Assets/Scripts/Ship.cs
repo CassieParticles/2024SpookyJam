@@ -16,7 +16,7 @@ public class Ship : MonoBehaviour
     bool dying = false;
 
     //When the user takes damage, what the time is set to
-    [SerializeField] private float[] ProgressionIntervals = new float[5] { 10, 20, 40, 60, 80 };
+    [SerializeField] private float[] ProgressionIntervals = new float[4] { 10, 20, 40, 60 };
 
     [SerializeField] private float engineDamageOffsetTime = 3.0f;
 
@@ -60,7 +60,7 @@ public class Ship : MonoBehaviour
     private void Update()
     {
         if (winning) {
-            gameObject.transform.position += new Vector3(0.002f, 0, 0);
+            gameObject.transform.position += new Vector3(1f * Time.deltaTime, 0, 0);
         } 
         else if (dying)
         {

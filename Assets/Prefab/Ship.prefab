@@ -218,7 +218,6 @@ MonoBehaviour:
   - 20
   - 40
   - 60
-  - 80
   engineDamageOffsetTime: 5
   shipStates:
   - {fileID: 21300000, guid: de9cf8be10205e240841e9196a7f7708, type: 3}
