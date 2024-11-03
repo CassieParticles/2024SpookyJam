@@ -1218,7 +1218,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 383, y: -210}
+  m_AnchoredPosition: {x: 367, y: -216}
   m_SizeDelta: {x: 1060, y: 565}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1550983830
@@ -1246,18 +1246,15 @@ MonoBehaviour:
     incoming Meteor Storm. Desperate to make it home, the crew activate the AI Defence
     Systems while they ramp up the Hyperdrive Engines.
 
-    
 
     ---------------------------------------------------------------------------------------
 
-    
 
     You
     take the role of the AI Emergency Necessary Defence System (E.N.D) , tasked with
     utilising the ships Meteor Manipulation Unit to protect the ship long enough
     to allow it to go to Hyperspace. Fail in your task, and there will be no Coda...
 
-    
 
     There
     will be No E.N.D.'
@@ -1269,8 +1266,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4280274176
-  m_fontColor: {r: 0, g: 0.8037735, b: 0.12208079, a: 1}
+    rgba: 4284546920
+  m_fontColor: {r: 0.40978706, g: 1, b: 0.3754716, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
