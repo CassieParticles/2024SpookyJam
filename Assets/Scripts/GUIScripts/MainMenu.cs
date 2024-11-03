@@ -5,12 +5,20 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    private MusicManager musicManager;
     public void Start()
     {
-        //Plays the States_Music event
-        AkSoundEngine.PostEvent("States_Music", this.gameObject);
-        //Sets the "Music" State Group's active State to "Menu"
-        AkSoundEngine.SetState("Music", "Menu");
+
+        musicManager = MusicManager.instance;
+
+        if (!musicManager.GetPlaying()) {
+            //Plays the States_Music event
+            AkSoundEngine.PostEvent("States_Music", this.gameObject);
+            //Sets the "Music" State Group's active State to "Menu"
+            AkSoundEngine.SetState("Music", "Menu");
+        } else {
+            musicManager.SetPlaying(true);
+        }
     }
 
     public void PlayGame()

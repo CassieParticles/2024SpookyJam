@@ -214,10 +214,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathAnimTime: 0.5
   ProgressionIntervals:
-  - 5
   - 10
-  - 15
-  - 30
+  - 20
+  - 40
+  - 60
+  - 80
   engineDamageOffsetTime: 5
   shipStates:
   - {fileID: 21300000, guid: de9cf8be10205e240841e9196a7f7708, type: 3}
