@@ -15,7 +15,7 @@ public class Ship : MonoBehaviour
     bool dying = false;
 
     //When the user takes damage, what the time is set to
-    [SerializeField] private float[] ProgressionIntervals = new float[3] { 5,10,15 };
+    [SerializeField] private float[] ProgressionIntervals = new float[3] { 10,30,60 };
 
     [SerializeField] private float engineDamageOffsetTime = 3.0f;
 

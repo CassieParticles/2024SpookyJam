@@ -81,6 +81,7 @@ public class MeteorPhysics : MonoBehaviour
         GetComponent<SpriteRenderer>().enabled = false;
         transform.GetChild(0).gameObject.SetActive(true);
         DeSelect();
+        rb.freezeRotation = true;
 
         //Plays the Meteor_Explode event
         AkSoundEngine.PostEvent("Meteor_Explode", this.gameObject);
