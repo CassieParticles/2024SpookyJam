@@ -41,6 +41,9 @@ public class CursorMovement : MonoBehaviour
             {
                 objectSelected = objectsIntersecting.First.Value;
                 objectSelected.GetComponent<MeteorPhysics>().Select(this.gameObject);
+
+                //Plays the Meteor_Grab event
+                AkSoundEngine.PostEvent("Meteor_Grab", this.gameObject);
             }
         }
         if(Input.GetMouseButtonUp(0))
