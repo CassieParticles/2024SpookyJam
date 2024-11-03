@@ -22,13 +22,6 @@ public class MainMenu : MonoBehaviour
 
         SceneManager.LoadScene("GameScene");
     }
-    public void BecTest()
-    {
-        //Plays the Button_Click event
-        AkSoundEngine.PostEvent("Button_Click", this.gameObject);
-
-        SceneManager.LoadScene("BecTestingScene");
-    }
 
     public void QuitGame()
     {
