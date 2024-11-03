@@ -49,6 +49,8 @@ public class PauseMenu : MonoBehaviour
         AkSoundEngine.PostEvent("Button_Click", this.gameObject);
         //Sets the "Music" State Group's active State to "Gameplay"
         AkSoundEngine.SetState("Music", "Gameplay");
+        //Plays the Button_Click event
+        AkSoundEngine.PostEvent("Pause_Menu_Close", this.gameObject);
     }
 
     public void QuitToMenu()
@@ -67,13 +69,17 @@ public class PauseMenu : MonoBehaviour
             AkSoundEngine.SetState("Music", "Menu");
             //Sets the "Engine" State Group's active State to "Stage1"
             AkSoundEngine.SetState("Engine", "Stage1");
+            //Plays the Button_Click event
+            AkSoundEngine.PostEvent("Pause_Menu_Open", this.gameObject);
         }
         else
         {
             //Sets the "Music" State Group's active State to "Gameplay"
             AkSoundEngine.SetState("Music", "Gameplay");
-
+            //Sets the "Engine" State Group's active State to correspond with the EngineState from the ship.cs script.
             AkSoundEngine.SetState("Engine", ship.GetComponent<Ship>().GetEngineState());
+            //Plays the Button_Click event
+            AkSoundEngine.PostEvent("Pause_Menu_Close", this.gameObject);
         }
     }
     

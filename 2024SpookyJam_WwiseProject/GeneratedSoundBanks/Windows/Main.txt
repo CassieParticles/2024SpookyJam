@@ -5,9 +5,11 @@ Event	ID	Name			Wwise Object Path	Notes
 	1149410026	Meteor_Grab			\Default Work Unit\Meteor_Grab	
 	1386564838	Player_Damaged			\Default Work Unit\Player_Damaged	
 	1598298728	Music_Menu			\Default Work Unit\Music_Menu	
+	1693365072	Pause_Menu_Open			\Default Work Unit\Pause_Menu_Open	
 	2461894715	States_Music			\Default Work Unit\States_Music	
 	2903516312	States_Engine			\Default Work Unit\States_Engine	
 	3083087645	Player_Death			\Default Work Unit\Player_Death	
+	3521170484	Pause_Menu_Close			\Default Work Unit\Pause_Menu_Close	
 	3809331500	Meteor_Throw			\Default Work Unit\Meteor_Throw	
 
 State Group	ID	Name			Wwise Object Path	Notes
@@ -34,10 +36,12 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	414592848	Meteor_Throw_2-1	C:\Users\flynn\GitHub\2024SpookyJam\2024SpookyJam_WwiseProject\.cache\Windows\SFX\Meteor_Throw_2-1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Meteor_Throws\Meteor_Throw_2-1		138304
 	454639775	Player_Damaged_2	C:\Users\flynn\GitHub\2024SpookyJam\2024SpookyJam_WwiseProject\.cache\Windows\SFX\Player_Damaged_2_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player_Damaged\Player_Damaged_2		220256
 	496553053	Celestial Stranding	C:\Users\flynn\GitHub\2024SpookyJam\2024SpookyJam_WwiseProject\.cache\Windows\SFX\Celestial Stranding_FBC78EF0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Celestial Stranding		18432096
+	570390508	Pause_Menu_Close	C:\Users\flynn\GitHub\2024SpookyJam\2024SpookyJam_WwiseProject\.cache\Windows\SFX\Pause_Menu_Close_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Pause_Menu_Close		240096
 	619490783	Player_Death	C:\Users\flynn\GitHub\2024SpookyJam\2024SpookyJam_WwiseProject\.cache\Windows\SFX\Player_Death_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player_Death		1152096
 	624017459	Bulwark of the Coda	C:\Users\flynn\GitHub\2024SpookyJam\2024SpookyJam_WwiseProject\.cache\Windows\SFX\Bulwark of the Coda_FBC78EF0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Bulwark of the Coda		15080824
 	636214354	Meteor_Grab	C:\Users\flynn\GitHub\2024SpookyJam\2024SpookyJam_WwiseProject\.cache\Windows\SFX\Meteor_Grab-1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Meteor_Grab		72096
 	682199324	Meteor_Throw_4-1	C:\Users\flynn\GitHub\2024SpookyJam\2024SpookyJam_WwiseProject\.cache\Windows\SFX\Meteor_Throw_4-1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Meteor_Throws\Meteor_Throw_4-1		145548
+	803073765	Pause_Menu_Open	C:\Users\flynn\GitHub\2024SpookyJam\2024SpookyJam_WwiseProject\.cache\Windows\SFX\Pause_Menu_Open_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Pause_Menu_Open		240096
 	880026024	Meteor_Throw_1-1	C:\Users\flynn\GitHub\2024SpookyJam\2024SpookyJam_WwiseProject\.cache\Windows\SFX\Meteor_Throw_1-1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Meteor_Throws\Meteor_Throw_1-1		133288
 	881738276	Button_Click_2	C:\Users\flynn\GitHub\2024SpookyJam\2024SpookyJam_WwiseProject\.cache\Windows\SFX\Button_Click_2_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Button_Clicks\Button_Click_2		51648
 	890956820	Meteor_Throw_3-1	C:\Users\flynn\GitHub\2024SpookyJam\2024SpookyJam_WwiseProject\.cache\Windows\SFX\Meteor_Throw_3-1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Meteor_Throws\Meteor_Throw_3-1		150008

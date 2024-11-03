@@ -10,6 +10,8 @@
 						<ObjectRef Name="Meteor_Throw" ID="{52E115B4-3970-45E1-9283-DCDBAC7C3E27}" WorkUnitID="{92FB35E2-CE24-4E88-9C2C-9B628B71FE01}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="States_Engine" ID="{78A0970A-4441-47B5-AF9B-3AA22D3D3F46}" WorkUnitID="{92FB35E2-CE24-4E88-9C2C-9B628B71FE01}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Music_Gameplay" ID="{80FB01D2-9E78-4884-97D4-BEF54D357596}" WorkUnitID="{92FB35E2-CE24-4E88-9C2C-9B628B71FE01}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Pause_Menu_Open" ID="{9582F151-454B-4AEF-8EE9-39735CB92FDB}" WorkUnitID="{92FB35E2-CE24-4E88-9C2C-9B628B71FE01}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Pause_Menu_Close" ID="{9D5F4568-43F8-4BB9-A382-30AB3404F7B8}" WorkUnitID="{92FB35E2-CE24-4E88-9C2C-9B628B71FE01}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Music_Menu" ID="{51D44012-7B58-4C28-B390-1EE3343B87BC}" WorkUnitID="{92FB35E2-CE24-4E88-9C2C-9B628B71FE01}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="States_Music" ID="{BF9B0F91-F04E-4C51-9FBB-E46B8DF2630D}" WorkUnitID="{92FB35E2-CE24-4E88-9C2C-9B628B71FE01}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Meteor_Grab" ID="{28CC3DBC-A581-4C68-B287-7984B1162291}" WorkUnitID="{92FB35E2-CE24-4E88-9C2C-9B628B71FE01}" Origin="Manual" Filter="7"/>

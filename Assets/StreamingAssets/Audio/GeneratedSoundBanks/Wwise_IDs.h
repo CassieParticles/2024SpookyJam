@@ -19,6 +19,8 @@ namespace AK
         static const AkUniqueID METEOR_THROW = 3809331500U;
         static const AkUniqueID MUSIC_GAMEPLAY = 620878633U;
         static const AkUniqueID MUSIC_MENU = 1598298728U;
+        static const AkUniqueID PAUSE_MENU_CLOSE = 3521170484U;
+        static const AkUniqueID PAUSE_MENU_OPEN = 1693365072U;
         static const AkUniqueID PLAYER_DAMAGED = 1386564838U;
         static const AkUniqueID PLAYER_DEATH = 3083087645U;
         static const AkUniqueID STATES_ENGINE = 2903516312U;

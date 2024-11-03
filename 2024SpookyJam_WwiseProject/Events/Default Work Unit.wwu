@@ -134,6 +134,28 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Pause_Menu_Open" ID="{9582F151-454B-4AEF-8EE9-39735CB92FDB}">
+					<ChildrenList>
+						<Action Name="" ID="{874C38A7-9866-4F01-94DE-AB9B2008E632}" ShortID="1038746422">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Pause_Menu_Open" ID="{C828227B-3CB5-4E00-84AD-CECA17FF7780}" WorkUnitID="{82C3EF6F-9CAE-4937-AE26-4630575489C6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Pause_Menu_Close" ID="{9D5F4568-43F8-4BB9-A382-30AB3404F7B8}">
+					<ChildrenList>
+						<Action Name="" ID="{070CE215-D264-4CD1-83B2-173E5E7A8E38}" ShortID="826897247">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Pause_Menu_Close" ID="{6BCB6D67-2BC4-498C-9341-125339683189}" WorkUnitID="{82C3EF6F-9CAE-4937-AE26-4630575489C6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

@@ -41,7 +41,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{00C3C852-C088-CD20-0D94-AF8A59CECB4A}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{3811234E-AF0E-D341-574B-165D218C9056}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -77,6 +77,10 @@
 					<ShortName>Celestial Stranding.wav</ShortName>
 					<CachePath>SFX/Celestial Stranding_FBC78EF0.wem</CachePath>
 				</File>
+				<File Id="570390508" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Pause_Menu_Close.wav</ShortName>
+					<CachePath>SFX/Pause_Menu_Close_818F3B66.wem</CachePath>
+				</File>
 				<File Id="619490783" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Player_Death.wav</ShortName>
 					<CachePath>SFX/Player_Death_818F3B66.wem</CachePath>
@@ -92,6 +96,10 @@
 				<File Id="682199324" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Meteor_Throw_4-1.wav</ShortName>
 					<CachePath>SFX/Meteor_Throw_4-1_818F3B66.wem</CachePath>
+				</File>
+				<File Id="803073765" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Pause_Menu_Open.wav</ShortName>
+					<CachePath>SFX/Pause_Menu_Open_818F3B66.wem</CachePath>
 				</File>
 				<File Id="880026024" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Meteor_Throw_1-1.wav</ShortName>
@@ -154,6 +162,16 @@
 						<MediaRef Id="496553053"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="3521170484" Name="Pause_Menu_Close" DurationType="OneShot" DurationMin="1.25" DurationMax="1.25">
+					<MediaRefs>
+						<MediaRef Id="570390508"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1693365072" Name="Pause_Menu_Open" DurationType="OneShot" DurationMin="1.25" DurationMax="1.25">
+					<MediaRefs>
+						<MediaRef Id="803073765"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="1386564838" Name="Player_Damaged" DurationType="OneShot" DurationMin="0.9696857" DurationMax="1.5116841">
 					<MediaRefs>
 						<MediaRef Id="454639775"/>
@@ -182,5 +200,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{0F390C1B-3DEC-549D-469F-79E9D24B0836}</FileHash>
+	<FileHash>{A1B34BD3-D832-E704-7FA4-CEFA520EB277}</FileHash>
 </SoundBanksInfo>
