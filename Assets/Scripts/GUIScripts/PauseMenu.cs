@@ -29,7 +29,7 @@ public class PauseMenu : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape))
+        if(Input.GetKeyDown(KeyCode.Escape) && !GameObject.Find("WinScreen").activeSelf && !GameObject.Find("LoseScreen").activeSelf)
         {
             paused = !paused;
             canvas.SetActive(paused);

@@ -70,7 +70,7 @@ public class MeteorPhysics : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
-        if (collision.name == "Explosion") {
+        if (collision.name == "Explosion" || collision.name == "WinProtection") {
             Explode();
         }
     }

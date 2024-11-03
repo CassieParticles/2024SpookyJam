@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Security.Cryptography.X509Certificates;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Ship : MonoBehaviour
@@ -30,6 +31,10 @@ public class Ship : MonoBehaviour
     //Timer, used for engine sprites and to increase time remaining
     private Timer timer;
 
+    GameObject winLoseMenu;
+    bool winning = false;
+    GameObject winProtection;
+
     //Get the Crew Spawner
     [SerializeField] private GameObject CrewSpawnerObj;
     private CrewSpawner crewSpawner;
@@ -46,13 +51,18 @@ public class Ship : MonoBehaviour
 
         engineGO = gameObject.transform.GetChild(0).gameObject;
 
+        winProtection = gameObject.transform.GetChild(1).gameObject;
+        winProtection.SetActive(false);
         //Plays the Button_Click event
         AkSoundEngine.PostEvent("States_Engine", this.gameObject);
     }
 
     private void Update()
     {
-        if (dying)
+        if (winning) {
+            gameObject.transform.position += new Vector3(0.002f, 0, 0);
+        } 
+        else if (dying)
         {
             deathTimer += Time.deltaTime;
             if (deathTimer > deathAnimTime)
@@ -114,7 +124,16 @@ public class Ship : MonoBehaviour
 
         //TEMP
         Debug.Log("Destroy");
+        winLoseMenu = GameObject.Find("LoseScreen");
+        winLoseMenu.GetComponent<LoseMenu>().Lose();
         Destroy(gameObject);
+    }
+
+    private void WinStart() {
+        winning = true;
+        winProtection.SetActive(true);
+        winLoseMenu = GameObject.Find("WinScreen");
+        winLoseMenu.GetComponent<WinMenu>().Win();
     }
 
     //Change the audio and visual of the ship
@@ -125,6 +144,10 @@ public class Ship : MonoBehaviour
 
     private void SetEngineState(int newState)
     {
+        if (newState == 0) {
+            WinStart();
+            return;
+        }
         string[] audioNames = new string[4] { "Stage4", "Stage3", "Stage2", "Stage1" };
         if(newState == currentEngineState) { return; }
 
