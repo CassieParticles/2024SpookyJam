@@ -1303,8 +1303,8 @@ MonoBehaviour:
     There
     will be No E.N.D.'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: 79459efec17a4d00a321bdcc27bbc385, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5a2c8e8d4836e8c4296ddd21066fd613, type: 2}
+  m_sharedMaterial: {fileID: -4604862074175538990, guid: 5a2c8e8d4836e8c4296ddd21066fd613, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
