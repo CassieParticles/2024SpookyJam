@@ -192,21 +192,21 @@ public class Ship : MonoBehaviour
             //Plays the Player_Damaged event
             AkSoundEngine.PostEvent("Player_Damaged", this.gameObject);
 
-            //triggers crew spawn on collision
-            crewSpawner.SpawnCrew();
-            for (int i = 0; i < ProgressionIntervals.Length; ++i)
-            {
-                if (ProgressionIntervals[i] > timer.getTimeLeft())
-                {
-                    timer.setTimeRemaining(ProgressionIntervals[i]);
-                    break;
-                }
-            }
-
             SetShipDamamgeState(lives);
             if(lives==0)
             {
                 DeathBegin();
+
+                //triggers crew spawn on collision
+                crewSpawner.SpawnCrew();
+                for (int i = 0; i < ProgressionIntervals.Length; ++i)
+                {
+                    if (ProgressionIntervals[i] > timer.getTimeLeft())
+                    {
+                        timer.setTimeRemaining(ProgressionIntervals[i]);
+                        break;
+                    }
+                }
             }
 
         }

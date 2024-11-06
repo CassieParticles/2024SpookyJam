@@ -39,6 +39,9 @@ public class LoseMenu : MonoBehaviour
 
     public void Retry() {
         SceneManager.LoadScene("GameScene");
+
+        //Plays the Button_Click event
+        AkSoundEngine.PostEvent("Button_Click", this.gameObject);
     }
 
     public void Quit() {
@@ -46,5 +49,7 @@ public class LoseMenu : MonoBehaviour
 
         //Sets the "Music" State Group's active State to "Menu"
         AkSoundEngine.SetState("Music", "Menu");
+        //Plays the Button_Click event
+        AkSoundEngine.PostEvent("Button_Click", this.gameObject);
     }
 }

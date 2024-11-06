@@ -539,7 +539,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 322}
-  m_SizeDelta: {x: 400, y: 100}
+  m_SizeDelta: {x: 1042.7566, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &429554825
 MonoBehaviour:
@@ -781,6 +781,10 @@ PrefabInstance:
     - target: {fileID: 6244471339242750170, guid: 7cca1b07e624fce4eaf866045b32281a, type: 3}
       propertyPath: m_SizeDelta.x
       value: 900
+      objectReference: {fileID: 0}
+    - target: {fileID: 6244471339242750170, guid: 7cca1b07e624fce4eaf866045b32281a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 322
       objectReference: {fileID: 0}
     - target: {fileID: 6623310522754815200, guid: 7cca1b07e624fce4eaf866045b32281a, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -1152,11 +1156,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7185173676724365639, guid: faf2d914ada80cb4da86ce7f9a9c1712, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 900
+      value: 1423.7437
       objectReference: {fileID: 0}
     - target: {fileID: 7185173676724365639, guid: faf2d914ada80cb4da86ce7f9a9c1712, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7185173676724365639, guid: faf2d914ada80cb4da86ce7f9a9c1712, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 322
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1445,7 +1453,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -3388330829786040007, guid: 595f0223d704e1a49b8ef1b37810d352, type: 3}
       propertyPath: maxCrew
-      value: 0
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 1187661903836089683, guid: 595f0223d704e1a49b8ef1b37810d352, type: 3}
       propertyPath: m_Name
