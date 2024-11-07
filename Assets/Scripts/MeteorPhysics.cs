@@ -28,7 +28,6 @@ public class MeteorPhysics : MonoBehaviour
 
     [SerializeField] private Sprite[] sprites;
 
-    [SerializeField] private GameObject MiniExplosion;
     private GameObject ExplosionManager;
     
 
@@ -72,9 +71,11 @@ public class MeteorPhysics : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
-        if (collision.name == "Explosion" || collision.name == "WinProtection") {
-            Explode();
-        }
+        if ((collision.name == "Explosion" || collision.name == "MiniExplosion(Clone)" || collision.name == "WinProtection") && !exploding) {
+            AdeleExplosionSingle();
+        } //else if ( ") {
+            //Explode();
+        //}
     }
 
     public void Explode() {
@@ -82,8 +83,10 @@ public class MeteorPhysics : MonoBehaviour
         rb.velocity = Vector2.zero;
         GetComponent<SpriteRenderer>().enabled = false;
         transform.GetChild(0).gameObject.SetActive(true);
+        transform.GetComponentInChildren<Animator>().Play("Explosion");
         DeSelect();
         rb.freezeRotation = true;
+        rb.simulated = false;
 
         //Plays the Meteor_Explode event
         AkSoundEngine.PostEvent("Meteor_Explode", this.gameObject);
@@ -115,12 +118,18 @@ public class MeteorPhysics : MonoBehaviour
         Vector2 meteor1Dir = gameObject.transform.GetComponent<Rigidbody2D>().velocity;
         Vector2 meteor2Dir = collision.transform.GetComponent<Rigidbody2D>().velocity;
 
-        Vector2 AvgPos = new Vector2(gameObject.transform.position.x + collision.transform.position.x / 2, gameObject.transform.position.y + collision.transform.position.y / 2);
+        //Vector2 AvgPos = new Vector2(gameObject.transform.position.x + collision.transform.position.x / 2, gameObject.transform.position.y + collision.transform.position.y / 2);
 
-        ExplosionManager.GetComponent<ExplosionManager>().AddExplosion(meteor1Dir, meteor2Dir, AvgPos);
-        gameObject.GetComponent<CircleCollider2D>().enabled = false;
-        gameObject.GetComponent<SpriteRenderer>().enabled = false;
-        rb.velocity = Vector2.zero;
-        exploding = true;
+        ExplosionManager.GetComponent<ExplosionManager>().AddExplosion(meteor1Dir, meteor2Dir, gameObject.transform.position);
+
+        Explode();
+    }
+
+    public void AdeleExplosionSingle() {
+        Vector2 meteorDir = gameObject.transform.GetComponent<Rigidbody2D>().velocity;
+
+        ExplosionManager.GetComponent<ExplosionManager>().AddExplosionSingle(meteorDir, gameObject.transform.position);
+
+        Explode();
     }
 }

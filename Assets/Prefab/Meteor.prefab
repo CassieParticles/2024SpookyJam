@@ -109,7 +109,6 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 97badfaf7c2b48b4d8dff5c8fb269320, type: 3}
   - {fileID: 21300000, guid: 90fe02e8229fa5144b69e64b9f9a62ba, type: 3}
   - {fileID: 21300000, guid: 8dbb21610adcbf64d83004fd62b5da83, type: 3}
-  MiniExplosion: {fileID: 0}
 --- !u!58 &4145551381639161461
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -179,7 +178,7 @@ CircleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 555478232569384986}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -218,6 +217,7 @@ GameObject:
   - component: {fileID: 660083016264490850}
   - component: {fileID: 3649747161327760731}
   - component: {fileID: 3760519383421312583}
+  - component: {fileID: 6375994120493972411}
   m_Layer: 1
   m_Name: Explosion
   m_TagString: Untagged
@@ -327,3 +327,24 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!95 &6375994120493972411
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1212910479688879645}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ed494cca9bf5f7546bf803a307536446, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

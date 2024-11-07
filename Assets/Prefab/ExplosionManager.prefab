@@ -44,9 +44,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2227fd36358bc14ea9d1a792482389c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clusterDuration: 1.05
-  clusterLength: 1.04
-  clusterStray: 0.12
-  explosionDuration: 0.67
-  explosionCount: 3
+  clusterDuration: 2.19
+  clusterLength: 1.06
+  clusterStray: 0.195
+  explosionDuration: 0.52
+  explosionCount: 2
+  splitExplosionCount: 5
   MiniExplosion: {fileID: 8020225154221090952, guid: 246656edcb5aa034bb95354f54a454ef, type: 3}
