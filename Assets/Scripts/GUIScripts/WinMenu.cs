@@ -36,6 +36,9 @@ public class WinMenu : MonoBehaviour
 
     public void Retry() {
         SceneManager.LoadScene("GameScene");
+
+        //Plays the Button_Click event
+        AkSoundEngine.PostEvent("Button_Click", this.gameObject);
     }
 
     public void Quit() {
@@ -45,5 +48,7 @@ public class WinMenu : MonoBehaviour
         AkSoundEngine.SetState("Music", "Menu");
         //Sets the "Engine" State Group's active State to "Stage1"
         AkSoundEngine.SetState("Engine", "Stage1");
+        //Plays the Button_Click event
+        AkSoundEngine.PostEvent("Button_Click", this.gameObject);
     }
 }

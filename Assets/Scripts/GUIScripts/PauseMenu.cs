@@ -21,6 +21,7 @@ public class PauseMenu : MonoBehaviour
         canvas = gameObject.transform.GetChild(0).gameObject;
         canvas.SetActive(false);
         paused = false;
+        Cursor.visible = false;
 
         //Sets the "Music" State Group's active State to "Gameplay"
         AkSoundEngine.SetState("Music", "Gameplay");
@@ -30,12 +31,13 @@ public class PauseMenu : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape)/* && !GameObject.Find("WinScreen").transform.GetChild(0).gameObject.activeSelf && !GameObject.Find("LoseScreen").transform.GetChild(0).gameObject.activeSelf*/)
+        if (Input.GetKeyDown(KeyCode.Escape) && !GameObject.Find("WinScreen").transform.GetChild(0).gameObject.activeSelf && !GameObject.Find("LoseScreen").transform.GetChild(0).gameObject.activeSelf)
         {
             paused = !paused;
             canvas.SetActive(paused);
             Time.timeScale = paused ? 0 : 1;
             MusicStates(paused);
+            Cursor.visible = paused;
         }
     }
 
@@ -45,6 +47,7 @@ public class PauseMenu : MonoBehaviour
         paused = false;
         canvas.SetActive(false);
         Time.timeScale = 1;
+        Cursor.visible = false;
 
         //Plays the Button_Click event
         AkSoundEngine.PostEvent("Button_Click", this.gameObject);
@@ -56,10 +59,12 @@ public class PauseMenu : MonoBehaviour
 
     public void QuitToMenu()
     {
+        //Plays the Button_Click event
         AkSoundEngine.PostEvent("Button_Click", this.gameObject);
         SceneManager.LoadScene("MainMenuScene");
 
-        //Plays the Button_Click event
+        //Sets the "Music" State Group's active State to "Menu"
+        AkSoundEngine.SetState("Music", "Menu");
     }
 
     public void MusicStates(bool state)
