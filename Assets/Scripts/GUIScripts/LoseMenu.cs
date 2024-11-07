@@ -46,6 +46,7 @@ public class LoseMenu : MonoBehaviour
 
     public void Quit() {
         SceneManager.LoadScene("MainMenuScene");
+        UnityEngine.Cursor.visible = true;
 
         //Sets the "Music" State Group's active State to "Menu"
         AkSoundEngine.SetState("Music", "Menu");
