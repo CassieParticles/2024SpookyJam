@@ -8,7 +8,7 @@ public class MainMenu : MonoBehaviour
     private MusicManager musicManager;
     public void Start()
     {
-
+        Cursor.visible = true;
         musicManager = MusicManager.instance;
 
         if (!musicManager.GetPlaying()) {

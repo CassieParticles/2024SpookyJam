@@ -46,7 +46,7 @@ public class MeteorPhysics : MonoBehaviour
     {
         if (!exploding) {
             if (isSelected) {
-                rb.velocity += -rb.velocity * grabDrag;
+                rb.velocity += -rb.velocity * grabDrag * Time.deltaTime;
                 rb.velocity += new Vector2(cursor.transform.position.x - rb.position.x, cursor.transform.position.y - rb.position.y) / rb.velocity.magnitude * accelerationDivider / 4;
                 if (rb.velocity.magnitude > speedLimit) {
                     rb.velocity *= speedLimit / rb.velocity.magnitude;

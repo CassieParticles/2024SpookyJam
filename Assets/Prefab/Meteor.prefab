@@ -101,9 +101,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40f82eb0b3bddd741ae6050993c59954, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  grabDrag: 0.0107
+  grabDrag: 0.0497
   speedLimit: 40
-  accelerationDivider: 1.5
+  accelerationDivider: 15
   flingSoundThreshold: 5.5
   sprites:
   - {fileID: 21300000, guid: 97badfaf7c2b48b4d8dff5c8fb269320, type: 3}
